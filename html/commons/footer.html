@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>현대엘리베이터/title>
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <script src="js/00_commons/jquery-3.4.1.min.js"></script>
+    <script src="js/00_commons/prefixfree.min.js"></script>
+    <script src="js/00_commons/jquery.easing.1.3.js"></script>
+       
+         
+    <script>
+        //top으로 이동하기
+        $(document).ready(function(){
+            $(window).scroll(function(){
+               if($(this).scrollTop() >=500) {
+                   $("#gotoTop").fadeIn();
+               } else {
+                   $("#gotoTop").fadeOut();
+               }
+            });
+                $("#gotoTop").click(function(){
+                   $("html,body").animate({scrollTop:0},700); 
+                });
+
+        });
+    </script>
+        
+</head>
+<body>
+            <footer>
+               <div class="footerBox">
+                   <ul class="footerTop">
+                       <li><a href="#">개인정보취급방침</a></li>
+                       <li><a href="#">이메일무단수집거부</a></li>
+                       <li><a href="#">이메일문의</a></li>
+                       <li><a href="#">사이트맵</a></li>
+                   </ul>
+                    <address>경기도 이천시 부발읍 경충대로 2091 현대엘리베이터 Tel : 1577-0603<br>
+                        COPYRIGHT ⓒ 2020 HYUNDAIELEVATOR CO.,LTD. ALL RIGHTS RESERVED</address>
+               </div>
+            </footer>
+            
+            <button id="gotoTop"><img src="../../img/00_commons/topGo_Btn.png" alt="맨 위로 이동"></button>
+         
+         
+</body>
+</html>

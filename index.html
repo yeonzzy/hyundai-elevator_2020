@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>현대엘리베이터</title>
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">    
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/commons/header.css">
+    <link rel="stylesheet" href="css/commons/footer.css">
+    <link rel="icon" href="img/000_favicon/favicon.png" type="image/png">
+    
+    <script src="js/00_commons/jquery-3.4.1.min.js"></script>
+    <script src="js/00_commons/prefixfree.min.js"></script>
+    <script src="js/00_commons/jquery.easing.1.3.js"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    
+    <link href="https://fonts.googleapis.com/css?family=Teko:300,400,500,600,700&display=swap" rel="stylesheet">
+    
+    <script type="text/javascript">
+        $(function(){
+            window.onload = function(){
+                setTimeout(function(){
+                    scrollTo(0,0);
+                },100);
+            }
+            
+            $("header").load("html/commons/header.html");
+            $("footer").load("html/commons/footer.html");
+            
+            $(".btn_list li").click(function(){  
+                 var i = $(".btn_list li").index(this);
+                 var s = $(".section").eq(i).offset().top;
+                   $(".btn_list li i").removeClass();
+                   $(".btn_list li i").addClass("fas fa-circle");
+                   $(".btn_list li i").eq(i).removeClass();
+                   $(".btn_list li i").eq(i).addClass("fas fa-circle on");
+                   $("html,body").stop().animate({scrollTop:s});
+             });
+
+            var deflut=0;
+            
+            $(".btn_list li i").removeClass();
+            $(".btn_list li i").addClass("fas fa-circle");
+            $(".btn_list li i").eq(deflut).removeClass();
+            $(".btn_list li i").eq(deflut).addClass("fas fa-circle on");
+            
+            
+            $(window).scroll(function(){
+                var scroll = $(window).scrollTop();
+                var ht= $(window).height();
+
+            for(var i=0; i<4; i++){
+                if(scroll >=ht*(i) && scroll < ht*(i+1)){                    
+                    $(".btn_list li i").removeClass();
+                    $(".btn_list li i").addClass("fas fa-circle");
+                    $(".btn_list li i").eq(i).removeClass();
+                    $(".btn_list li i").eq(i).addClass("fas fa-circle on");
+                }
+                else if(scroll == 0){
+                    $(".btn_list li i").removeClass();
+                    $(".btn_list li i").addClass("fas fa-circle");
+                    $(".btn_list li i").eq(0).removeClass();
+                    $(".btn_list li i").eq(0).addClass("fas fa-circle on");
+                };               
+            }
+            }); 
+            var select = ".section";
+            $(select).each(function (index) {
+                
+                // 개별적으로 Wheel 이벤트 적용
+                $(this).on("mousewheel DOMMouseScroll", function (e) {
+                    e.preventDefault();
+                    var delta = 0;
+                    if (!event) event = window.event;
+                    if (event.wheelDelta) {
+                        delta = event.wheelDelta / 120;
+                        if (window.opera) delta = -delta;
+                    } 
+                    else if (event.detail)
+                        delta = -event.detail / 3;
+                    var moveScorll = $(window).scrollTop();
+                    var section = $(select).eq(index);
+                    // 마우스휠을 위에서 아래로
+                    if (delta < 0) {
+                        if ($(section).next() != undefined) {
+                            try{
+                                moveScorll = $(section).next().offset().top;
+                            }catch(e){}
+                        }
+                    // 마우스휠을 아래에서 위로
+                    } else {
+                        if ($(section).prev() != undefined) {
+                            try{
+                                moveScorll = $(section).prev().offset().top;
+                            }catch(e){}
+                        }
+                    }
+                    // 마우스 휠 내릴시 header 바뀜
+                    $(window).scroll(function(){
+                        var windowScroll = $(window).scrollTop();
+                        if(windowScroll > 10){
+                            $("header").css({"background":"rgba(255,255,255,0.9)","border-bottom":"1px solid #dbdbdb","color":"#1e3963","transition":"all 0.5s"});
+                            $("header > #main_menu > img").attr("src","img/00_commons/header/hamburger_menu_scroll.png");
+                            $("header > h1 > a> img").attr("src","img/00_commons/header/main_logo.png");
+                        } else {
+                            $("header").css({"background":"rgba(0,0,0,0.3)","border":"none","color":"#f9f9f9","transition":"all 0.5s"});
+                            $("header > #main_menu > img").attr("src","img/00_commons/header/hamburger_menu.png");
+                            $("header > h1 > a> img").attr("src","img/00_commons/header/main_white_logo.png");
+                        }
+                    });
+                     
+                    $("html,body").stop().animate({
+                        scrollTop: moveScorll + 'px'
+                    },{duration: 900, complete: function(){}});
+                    
+                });
+            });
+            
+            
+            //버튼, youtubeBox>img hover시 선 생성
+            $(".line1, .line2, .line3, .line4").hide();
+            $(".btn, .youtubeBox>img").mouseenter(function(){
+                $(".btn").css({"border":"0"});
+                $(".line1").show();
+                $(".line2").show();
+                $(".line3").show();
+                $(".line4").show();
+            });
+            $(".btn, .youtubeBox>img").mouseleave(function(){
+                $(".btn").css({"border":"1px solid #f9f9f9"});
+                $(".line1").hide();
+                $(".line2").hide();
+                $(".line3").hide();
+                $(".line4").hide();
+            });
+            
+            //business에서 사진 hover시 사진확대, 글박스 올라오기
+            $(".s2 > .business > div ").mouseenter(function(){
+                var a = $(this).index();
+                $(".businessImg").eq(a-2).css({"transform":"scale(1.12)","transition":"0.5s"});
+                $(".businessBox").eq(a-2).stop().animate({top:"0"},500);
+            });
+            $(".s2 > .business > div ").mouseleave(function(){
+                $(".businessImg").css({"transform":"scale(1.0)","transition":"0.5s"});
+                $(".businessBox").stop().animate({top:"80%"},500);
+            });
+            
+            //information에서 재생사진 클릭시 유투브 재생
+            function autoPlayVideo(vcode, width, height){
+                "use strict";
+                $(".youtubeBox>img").html('<iframe width="'+width+'" height="'+height+'" src="https://www.youtube.com/embed/t_-HGDkG2S0?rel=0&amp;controls=0&amp;showinfo=0&autoplay=1&vq=hd1080" frameborder="0" allow="autoplay;" allowfullscreen"></iframe>');
+            }
+            
+            $(".video").click(function(e){
+                e.preventDefault();
+               autoPlayVideo("uJi6MpHAEh4","100%","550px");
+            });
+        });
+    </script>
+        
+</head>
+<body>
+    <header>
+    
+    </header>
+    
+    
+    <div id="wrap">       
+       
+        <div class="section s1">
+            <div class="innovation">
+                <p class="centerTxt">
+                    <strong>The No.1 for 13 years,</strong> we continue to make history in Korea
+                </p>
+                 <h2>
+                     ELEVATOR
+                 </h2>
+                 <p class="innoTxt">
+                    13년 연속 1위로 대한민국 엘리베이터의 역사를 만들어 갑니다.<br>
+                    현대엘리베이터가 만든 새로운 길을 따라 세상은 위로 넓어집니다.
+                 </p>
+                 <a class="btn" href="#">
+                     <div class="line1"></div>
+                     <div class="line2"></div>
+                     <div class="line3"></div>
+                     <div class="line4"></div>
+                     VIEW
+                 </a>
+            </div>
+            <i class="fas fa-angle-double-down"></i>
+        </div>
+        
+        <div class="section s2">
+           <div class="business">
+               <h3>
+                   Business
+               </h3>
+               <p>현대엘리베이터는 수많은 어려움 속에서도 부단한 노력을 통해 승강기 사업 국내 1위 기업이라는 지위를 굳게 지키고 있습니다.</p>
+               <div class="elevator">
+                    <a href="html/business.html"><img class="businessImg" src="img/01_index/section02/sec02_elevator.jpg" alt="엘레베이터"></a>
+                   <div class="businessBox">
+                       <span class="businessTitle">엘레베이터</span>
+                       <p>현대엘리베이터는 엘리베이터 용도와 건축 설계에 따른 다양한 제품 개발로 고객 맞춤형 솔루션을 제공합니다.</p>
+                       <a href="html/business.html">Read More &rarr;</a>
+                   </div>
+               </div>
+               <div class="escalator">
+                   <a href="html/business.html"><img class="businessImg" src="img/01_index/section02/sec02_escalator.jpg" alt="에스컬레이터"></a>
+                   <div class="businessBox">
+                       <span class="businessTitle">에스컬레이터</span>
+                       <p>에스컬레이터와 무빙워크는 편안한 승차감과 안전성,
+                        경제성을 고루 갖추었으며, 빌딩을 열린 공간, 소통의 공간으로 만들어 드립니다.</p>
+                       <a href="html/business.html">Read More &rarr;</a>
+                   </div>
+               </div>
+           </div>
+           <i class="fas fa-angle-double-down"></i>
+        </div>
+        
+        <div class="section s3">
+            <div class="information">
+                <h4>Information</h4>
+                <p>현대엘리베이터는 안전과 윤리경영을 기본 철학으로 전 세계 고객의 이동효율 서비스를 선도하는 기업입니다.</p>
+                <div class="youtubeBox">
+                         <div class="line1"></div>
+                         <div class="line2"></div>
+                         <div class="line3"></div>
+                         <div class="line4"></div>
+                        <img src="img/01_index/section03/sec03_play-button.png" alt="현대엘리베이터유트브영상">
+                </div>
+            </div>
+            <i class="fas fa-angle-double-down"></i>
+        </div>
+        <div class="section s4">
+           <div class="service">
+               <h5>Service</h5>
+               <div class="career">
+                   <img src="img/01_index/section04/sec04_career.jpg" alt="인재채용사진">
+                   <div class="careerTxt">
+                       <span>인재채용</span>
+                       <p>꿈을 꾸고 도전하는 미래 인재는 자신있게 문을 두드리세요.</p>
+                       <a href="html/career.html"><img src="img/01_index/section04/sec04_plus_icon.png" alt="인재채용버튼"></a>
+                   </div>
+               </div>
+               <div class="serviceRight">
+                   <div class="about">
+                       <div class="aboutBg"></div>
+                       <div class="aboutTxt">
+                        <span>회사소개</span>
+                        <p>항상 새로운 가능성을 생각하며 다가올 미래를 준비합니다.</p>
+                        <a href="html/about.html"><img src="img/01_index/section04/sec04_plus-white_icon.png" alt="회사소개버튼"></a>
+                       </div>
+                       
+                   </div>
+                   <div class="news">
+                       <span class="ncSpan">소식보기</span>
+                       <p class="ncTxt">엘레베이터산업의 선두주자 </p>
+                       <a class="ncBtn" href="html/news.html"><img src="img/01_index/section04/sec04_plus_icon.png" alt="소식보기버튼"></a>
+                   </div>
+                   <div class="center">
+                      <span class="ncSpan">오시는길</span>
+                      <p class="ncTxt">현대 엘리베이터 본사</p>
+                       <a class="ncBtn" href="html/support.html"><img src="img/01_index/section04/sec04_plus_icon.png" alt="오시는길버튼"></a>
+                   </div>
+               </div>
+           </div>
+            <footer>
+            
+            </footer>
+        </div>
+        <script>
+            //hover시 이미지 확대
+            $('.career').hover(
+                function () {
+                    $('.career>img').css({ "transform": "scale(1.1)", "transition": "0.5s" });
+                },
+                function () {
+                    $('.career>img').css({ "transform": "scale(1.0)", "transition": "0.5s" });
+                }
+            );
+
+            $('.about').hover(
+                function () {
+                    $('.aboutBg').css({ "transform": "scale(1.1)", "transition": "0.5s" });
+                },
+                function () {
+                    $('.aboutBg').css({ "transform": "scale(1.0)", "transition": "0.5s" });
+                }
+            );
+        </script>
+    </div>
+    <ul class="btn_list">
+           <li><i class="fas fa-circle"></i></li>
+           <li><i class="fas fa-circle"></i></li>
+           <li><i class="fas fa-circle"></i></li>
+           <li><i class="fas fa-circle"></i></li>
+       </ul>
+</body>
+</html>
