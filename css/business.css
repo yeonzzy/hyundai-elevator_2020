@@ -1,5 +1,7 @@
 @charset "utf-8";
-@import url(reset.css);
+@import url(commons/reset.css);
+@import url(commons/header.css);
+@import url(commons/footer-sub.css);
 @font-face {
     font-family: 'NanumSquare';
     src: local('font/NanumSquare'),
@@ -38,7 +40,7 @@ figure {
     max-width: 100%;
     height: 500px;
     position: relative;
-    background: url(../images/businessBg.jpg) no-repeat;
+    background: url(../img/03_business/sub02_figure-bg.jpg) no-repeat;
     background-attachment: fixed;
     font-family: 'Noto Sans KR', sans-serif !important;
 }
@@ -117,13 +119,13 @@ figure {
 .elevator > .bg {
     position: relative;
     height: 400px;
-    background: url(../images/sub02_elevator.jpg) center no-repeat;
+    background: url(../img/03_business/sub02_con_elevator.jpg) center no-repeat;
     background-size: cover;
 }
 .escalator > .bg {
     position: relative;
     height: 400px;
-    background: url(../images/sub02_escalator.jpg) center no-repeat;
+    background: url(../img/03_business/sub02_con_escalator.jpg) center no-repeat;
     background-size: cover;
 }
 .bg > .title {
@@ -252,21 +254,35 @@ figure {
         max-width: 95%;
     }
     
-    
     .contents {
         margin: 80px auto;
     }
     .contents > h3 {
         font-size: 28px;
-        margin-bottom: 80px;
+    }
+
+    .contents > .txt{
+        font-size: 14px;
+    }
+
+    .contents > .txt > strong:after {
+        width: 50%;
+    }
+
+    .contents > .txt.t3 > strong:after {
+        width: 60%;
+    }
+
+    .contents > .txt.t4 > strong:after {
+        width: 12%;
     }
     
-    .contents > .txt > strong:after {
+    .contents > .txt.t5 > strong:after {
         width: 55%;
     }
     
-    .contents > .txt:nth-child(3) > .light:after {
-        width: 65%;
+    .contents > .txt.t6 > strong:after {
+        width: 30%;
     }
 
 }
@@ -295,7 +311,7 @@ figure {
         width: 100%;
         height: 200px;
         padding: 20px;
-        background: rgba(30,57,99,0.8);
+        background: #0088368e;
     }
     .bg > .title > img {
         width: 45px;
@@ -307,23 +323,27 @@ figure {
     .bg > .title > p {
         line-height: 21px;
     }
-    
-    
+ 
     .contents {
         margin: 70px auto;
     }
     .contents > h3 {
         font-size: 24px;
-        margin-bottom: 70px;
     }
+
     .contents > .txt {
         width: 100%;
         float: none;
         margin-bottom: 50px;
     }
-    .contents > .txt:nth-child(3) {
-        margin: 0 0 50px 0;
+    .contents > .txt.t2 {
+        margin: 50px 0;
     }
+
+    .contents > .txt.t5 {
+        margin: 50px 0;
+    }
+
     .contents > .txt > span {
         font-size: 23px;
     }
@@ -331,22 +351,11 @@ figure {
         font-size: 17px;
         margin: 20px 0 30px 0;
     }
+    
     .contents > .txt > strong:after {
-        width: 75%;
-        top: 8px;
+        width: 60%;
     }
-    .contents > .txt:nth-child(3) > strong:after {
-        width: 85%;
-    }
-    .contents > .txt:nth-child(4) > strong:after {
-        width: 85%;
-    }
-    .contents > .txt:nth-child(3) > .light:after {
-        width: 80%;
-    }
-    .contents > .txt:nth-child(4) > .light:after {
-        width: 80%;
-    }
+
     .contents > .txt > p {
         line-height: 23px;
         margin-bottom: 30px;
