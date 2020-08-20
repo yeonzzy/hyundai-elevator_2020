@@ -1,0 +1,950 @@
+@charset "utf-8";
+@import url(commons/reset.css);
+@import url(commons/header.css);
+@import url(commons/footer-sub.css);
+@font-face {
+    font-family: 'NanumSquare';
+    src: local('font/NanumSquare'),
+        url('../font/NanumSquareR.ttf'),
+        url('../font/NanumSquareR.eot'),
+        url('../font/NanumSquareR.woff');
+}
+@font-face {
+    font-family: 'NanumSquareL';
+    src: url('../font/NanumSquareL.ttf'),
+        url('../font/NanumSquareL.eot'),
+        url('../font/NanumSquareL.woff');
+}
+@font-face {
+    font-family: 'NanumSquareB';
+    src: url('../font/NanumSquareB.ttf'),
+        url('../font/NanumSquareB.eot'),
+        url('../font/NanumSquareB.woff');
+}
+@font-face {
+    font-family: 'NanumSquareEB';
+    src: url('../font/NanumSquareEB.ttf'),
+        url('../font/NanumSquareEB.eot'),
+        url('../font/NanumSquareEB.woff');
+}
+
+html,body {
+    font-family: 'NanumSquare';
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    color: #1c1c1b;
+}
+
+
+figure {
+    max-width: 100%;
+    height: 500px;
+    position: relative;
+    background: url(../img/05_career/sub04_figure-bg.jpg) no-repeat;
+    background-position: 0 90%;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Noto Sans KR', sans-serif !important;
+}
+#figureTxt {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 160px 20px 0 20px;
+    color: #f9f9f9;
+}
+#figureTxt > h2 {
+    font-weight: 700;
+    letter-spacing: 5px;
+    font-size: 75px;
+    margin-bottom: 50px;
+}
+#figureTxt > span {
+    margin: 0 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+#figureTxt > .fa-home, .right {
+    color: #FFB300;
+    font-size: 14px;
+}
+
+.tab {
+    width: 1024px;
+    height: 60px;
+    line-height: 60px;
+    background: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    position: absolute;
+    bottom: 0;
+}
+.tab:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.tab > li {
+    font-size: 18px;
+    float: left;
+    width: 50%;
+    text-align: center;
+    border-bottom: 1px solid #efeeee;
+}
+.tab > li > a {
+    display: block;
+} 
+.on {
+    font-family: "NanumSquareEB";
+    color: #f9f9f9;
+    background: #008837;
+}
+
+#container {
+    max-width: 100%;
+    margin: 50px auto;
+    position: relative;
+}
+
+
+#talent1 {
+    max-width: 1024px;
+    margin: 0 auto;
+    position: relative;
+}
+#talent1 > .talent1Bg {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background: url(../img/05_career/sub04_con_talent-bg.png) bottom no-repeat;
+    background-size: cover;
+}
+#talent1 > .talent1Bg > strong {
+    font-family: "NanumSquareEB";
+    display: block;
+    color: #fff;
+    text-align: center;
+    font-size: 45px;
+    padding: 125px 0;
+}
+#talent1 > .talent1Bg:after {
+    content: '';
+    display: block;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    bottom: -70px;
+    width: 2px;
+    height: 130px;
+    background: #FFB300;
+}
+
+#talent1 > .talent1Txt {
+    width: 100%;
+    position: relative;
+    margin: 100px 0 50px 0;
+}
+#talent1 > .talent1Txt > p {
+    font-family: "NanumSquareB";
+    width: 80%;
+    margin: 0 auto;
+    color: #424242;
+    text-align: center;
+    font-size: 18px;
+}
+
+
+#talent2 {
+    max-width: 1024px;
+    margin: 80px auto 200px auto;
+    position: relative;
+}
+#talent2:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+#talent2 > .talent2Bg {
+    position: relative;
+    width: 50%;
+    height: 500px;
+    float: left;
+    background: url(../img/05_career/sub04_con_talent_work01.jpg) no-repeat;
+    background-size: cover;
+}
+#talent2 > .talent2Bg:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 500px;
+    background: #008837;
+    right: -50px;
+    bottom: -50px;
+    z-index: -500;
+}
+#talent2 > .talent2Txt {
+    width: 40%;
+    float: right;
+    padding: 170px 30px 0 30px;
+}
+
+.workStrong {
+    font-family: 'Noto Sans KR', sans-serif !important;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 18px;
+    color:#FFB300;
+}
+.workTitle {
+    display: block;
+    font-family: "NanumSquareB";
+    font-size: 25px;
+    margin: 10px 0 30px 0;
+}
+
+#talent2 > .talent2Txt > ol{
+    margin: 0 0 0 20px;
+}
+
+#talent2 > .talent2Txt > ol > li{
+    line-height: 40px;
+    font-size: 16px;
+    list-style-type: decimal !important;
+}
+
+
+#talent3 {
+    max-width: 1024px;
+    margin: 80px auto;
+}
+#talent3:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 400px;
+    background: #efeeee;
+    left: 0;
+    z-index: -500;
+}
+#talent3:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+#talent3 > .talent3Bg {
+    position: relative;
+    width: 50%;
+    height: 500px;
+    float: right;
+    background: url(../img/05_career/sub04_con_talent_work02.jpg) no-repeat;
+    background-size: cover;
+}
+#talent3 > .talent3Txt {
+    width: 40%;
+    float: left;
+    padding: 90px 30px 0 30px;
+}
+
+#talent3 > .talent3Txt > ol{
+    margin: 0 0 0 20px;
+}
+
+#talent3 > .talent3Txt > ol > li{
+    line-height: 40px;
+    font-size: 18px;
+    list-style-type: decimal !important;
+    font-size: 16px;
+}
+
+
+#talent4 {
+    max-width: 1024px;
+    margin: 130px auto 200px auto;
+    position: relative;
+}
+#talent4:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+#talent4 > .talent4Bg {
+    position: relative;
+    width: 50%;
+    height: 500px;
+    float: left;
+    background: url(../img/05_career/sub04_con_talent_work03.jpg) no-repeat;
+    background-size: cover;
+}
+#talent4 > .talent4Bg:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 500px;
+    background: #008837;
+    right: -50px;
+    bottom: -50px;
+    z-index: -500;
+}
+#talent4 > .talent4Txt {
+    width: 40%;
+    float: right;
+    padding: 170px 30px 0 30px;
+}
+
+#talent4 > .talent4Txt > ol{
+    margin: 0 0 0 20px;
+}
+
+#talent4 > .talent4Txt > ol > li{
+    line-height: 40px;
+    font-size: 16px;
+    list-style-type: decimal !important;
+}
+
+
+#system1 {
+    max-width: 1024px;
+    margin: 0 auto;
+    position: relative;
+}
+#system1 > .system1Bg {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background: url(../img/05_career/sub04_con_system-bg.jpg) no-repeat;
+    background-size: cover;
+}
+
+#system1 > .system1Bg > strong {
+    font-family: "NanumSquareEB";
+    display: block;
+    color: #fff;
+    text-align: center;
+    font-size: 45px;
+    padding: 125px 0;
+}
+#system1 > .system1Bg:after {
+    content: '';
+    display: block;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    bottom: -70px;
+    width: 2px;
+    height: 130px;
+    background: #FFB300;
+}
+
+#system1 > .system1Txt {
+    width: 100%;
+    position: relative;
+    margin: 100px 0 50px 0;
+}
+#system1 > .system1Txt > p {
+    font-family: "NanumSquareB";
+    width: 80%;
+    margin: 0 auto;
+    color: #424242;
+    text-align: center;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+
+#system2 {
+    max-width: 1024px;
+    margin: 80px auto 200px auto;
+    position: relative;
+}
+#system2 > .circle {
+    width: 100%;
+    position: relative;
+}
+#system2 > .circle:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+#system2 > .circle > div {
+    width: 20%;
+    position: relative;
+    float: left;
+    text-align: center;
+}
+#system2 > .circle > div:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 70px;
+    left: 195px;
+    width: 50px;
+    height: 50px;
+    background: url(../img/05_career/sub04_con_system_arrow.png) no-repeat;
+    background-size: 20px;
+}
+#system2 > .circle > div:nth-child(5):after {
+    display: none;
+}
+#system2 > .circle > div > i {
+    color: #bbb;
+    font-size: 45px;
+    width: 160px;
+    height: 160px;
+    line-height: 160px;
+    border-radius: 50%;
+    border: 5px solid #008837;
+}
+#system2 > .circle > div:nth-child(5) > i {
+    color: #fff;
+    border: none;
+    background: #008837;
+}
+#system2 > .circle > div > span {
+    display: block;
+    font-family: "NanumSquareB";
+    font-size: 20px;
+    margin: 30px 0 10px 0;
+}
+#system2 > .circle > div > p {
+    padding: 10px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+
+/*미디어쿼리*/
+@media (min-width: 768px) and (max-width: 1024px) {
+    .tab {
+        width: 100%;
+    }
+    
+    #talent1 {
+        max-width: 95%;
+    }
+    #talent1 > .talent1Bg > strong {
+        font-size: 43px;
+    }
+
+    #talent1 > .talent1Txt > p {
+        width: 85%;
+        font-size: 17px;
+        line-height: 30px;
+    }
+
+
+    #talent2 {
+        max-width: 95%;
+    }
+    #talent2 > .talent2Bg {
+        height: 400px;
+    }
+    #talent2 > .talent2Bg:after {
+        height: 400px;
+    }
+    #talent2 > .talent2Txt {
+        padding: 100px 30px 0 10px;
+    }
+
+
+    .workStrong {
+        font-size: 16px;
+    }
+    .workTitle {
+        font-size: 2.5vw;
+    }
+
+    #talent2 > .talent2Txt > ol > li{
+        line-height: 35px;
+        font-size: 1.5vw;
+    }
+
+
+    #talent3 {
+        max-width: 95%;
+    }
+    #talent3:before {
+        height: 400px;
+    }
+    #talent3 > .talent3Bg {
+        height: 450px;
+        background-position: center;
+    }
+    #talent3 > .talent3Txt {
+        padding: 50px 30px 0 30px;
+    }
+
+    #talent3 > .talent3Txt > ol > li{
+        line-height: 35px;
+        font-size: 1.5vw;
+    }
+
+
+    #talent4 {
+        max-width: 95%;
+    }
+    #talent4 > .talent4Bg {
+        height: 400px;
+    }
+    #talent4 > .talent4Bg:after {
+        height: 400px;
+    }
+    #talent4 > .talent4Txt {
+        padding: 100px 30px 0 20px;
+    }
+
+    #talent4 > .talent4Txt> ol > li{
+        line-height: 35px;
+        font-size: 1.5vw;
+    }
+    
+    
+    #system1 {
+        max-width: 95%;
+    }
+    #system1 > .system1Bg > strong {
+        font-size: 43px;
+    }
+
+    #system1 > .system1Txt > p {
+        width: 85%;
+        font-size: 17px;
+        line-height: 30px;
+    }
+
+
+    #system2 {
+        max-width: 70%;
+        margin-top: 50px;
+        margin-bottom: 100px;
+    }
+    #system2 > .circle > div {
+        width: 100%;
+        margin: 30px auto;
+        float: left;
+    }
+    #system2 > .circle > div:after {
+        top: 180px;
+        left: 40px;
+        transform: rotate(90deg);
+        transition: all 0.5s;
+    }
+    #system2 > .circle > div > i {
+        font-size: 45px;
+        float: left;
+    }
+    #system2 > .circle > div > span {
+        margin: 30px 0 0 0;
+    }
+
+    #system2 > .circle > div:nth-child(2) > span {
+        font-size: 22px;
+        margin: 70px 0 0 0;
+    }
+
+    #system2 > .circle > div:nth-child(4) > span {
+        font-size: 22px;
+        margin: 70px 0 0 0;
+    }
+
+    #system2 > .circle > div:nth-child(5) > span {
+        font-size: 22px;
+        margin: 70px 0 0 0;
+    }
+
+
+    
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    #figureTxt > h2 {
+        font-size: 65px;
+    }
+    
+    .tab {
+        width: 100%;
+        height: 55px;
+        line-height: 55px;
+    }
+    .tab > li {
+        font-size: 17px;
+    }
+    
+    
+    #talent1 {
+        max-width: 95%;
+    }
+    #talent1 > .talent1Bg {
+        height: 250px;
+    }
+    #talent1 > .talent1Bg > strong {
+        font-size: 40px;
+        padding: 100px 0;
+    }
+
+    #talent1 > .talent1Txt > p {
+        width: 85%;
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+
+    #talent2 {
+        max-width: 95%;
+        margin: 80px auto 100px auto;
+    }
+    #talent2 > .talent2Bg {
+        width: 100%;
+        height: 400px;
+        float: none;
+    }
+    #talent2 > .talent2Bg:after {
+        height: 400px;
+        right: 0;
+        bottom: -50px;
+    }
+    #talent2 > .talent2Txt {
+        width: 100%;
+        float: none;
+        padding: 100px 30px 0 30px;
+    }
+
+
+    .workStrong {
+        letter-spacing: 2px;
+        font-size: 17px;
+    }
+    .workTitle {
+        font-size: 24px;
+        margin: 10px 0 30px 0;
+    }
+
+    #talent3 {
+        max-width: 95%;
+        margin: 80px auto;
+    }
+    #talent3:before {
+        width: 100%;
+        height: 700px;
+        left: 0;
+    }
+    #talent3 > .talent3Bg {
+        width: 100%;
+        height: 400px;
+        float: none;
+        background-position: center;
+    }
+    #talent3 > .talent3Txt {
+        width: 100%;
+        float: none;
+        padding: 50px 30px 0 30px;
+    }
+
+
+    #talent4 {
+        max-width: 95%;
+        margin: 200px auto 140px auto;
+    }
+    #talent4 > .talent4Bg {
+        width: 100%;
+        height: 400px;
+        float: none;
+    }
+    #talent4 > .talent4Bg:after {
+        width: 100%;
+        height: 400px;
+        right: 0;
+        bottom: -50px;
+    }
+    #talent4 > .talent4Txt {
+        width: 100%;
+        float: none;
+        padding: 100px 30px 0 30px;
+    }
+    
+    
+    #system1 {
+        max-width: 95%;
+    }
+    #system1 > .system1Bg {
+        width: 100%;
+        height: 250px;
+    }
+    #system1 > .system1Bg > strong {
+        font-size: 40px;
+        padding: 100px 0;
+    }
+
+    #system1 > .system1Txt > p {
+        width: 85%;
+        font-size: 16px;
+        line-height: 28px;
+    }
+    
+    
+    #system2 {
+        max-width: 80%;
+        margin: 50px auto 100px auto;
+    }
+    #system2 > .circle > div {
+        width: 100%;
+        margin: 30px auto;
+        float: left;
+    }
+    #system2 > .circle > div:after {
+        top: 170px;
+        left: 35px;
+        width: 50px;
+        height: 50px;
+        background-size: 20px;
+        transform: rotate(90deg);
+        transition: all 0.5s;
+    }
+    #system2 > .circle > div > i {
+        font-size: 40px;
+        float: left;
+        width: 150px;
+        height: 150px;
+        line-height: 150px;
+        border-radius: 50%;
+    }
+    #system2 > .circle > div > span {
+        font-size: 23px;
+        margin: 30px 0 0 0;
+    }
+
+    #system2 > .circle > div:nth-child(2) > span {
+        font-size: 22px;
+        margin: 50px 0 0 0;
+    }
+
+    #system2 > .circle > div:nth-child(4) > span {
+        font-size: 22px;
+        margin: 50px 0 0 0;
+    }
+
+    #system2 > .circle > div:nth-child(5) > span {
+        font-size: 22px;
+        margin: 50px 0 0 0;
+    }
+
+    #system2 > .circle > div > p {
+        font-size: 15px;
+        padding: 10px;
+        line-height: 23px;
+        margin-top: 10px
+    }
+
+
+
+    
+}
+
+@media all and (max-width: 480px) {   
+    #figureTxt > h2 {
+        font-size: 55px;
+    }
+    #figureTxt > span {
+        font-size: 15px;
+    }
+    #figureTxt > .fa-home, .right {
+        font-size: 13px;
+    }
+    
+    .tab {
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+    }
+    .tab > li {
+        font-size: 16px;
+    }
+    
+    
+    #talent1 {
+        max-width: 95%;
+    }
+    #talent1 > .talent1Bg {
+        height: 200px;
+    }
+    #talent1 > .talent1Bg > strong {
+        font-size: 35px;
+        padding: 80px 0;
+    }
+
+    #talent1 > .talent1Txt {
+        margin: 90px 0 50px 0;
+    }
+    #talent1 > .talent1Txt > p {
+        width: 90%;
+        font-size: 15px;
+        line-height: 28px;
+    }
+
+
+    #talent2 {
+        max-width: 95%;
+        margin: 80px auto 100px auto;
+    }
+    #talent2 > .talent2Bg {
+        width: 100%;
+        height: 300px;
+        float: none;
+    }
+    #talent2 > .talent2Bg:after {
+        height: 300px;
+        right: 0px;
+        bottom: -50px;
+    }
+    #talent2 > .talent2Txt {
+        width: 100%;
+        float: none;
+        padding: 100px 10px 0 10px;
+    }
+
+
+    .workStrong {
+        letter-spacing: 2px;
+        font-size: 15px;
+    }
+    .workTitle {
+        font-size: 22px;
+        margin: 10px 0 30px 0;
+    }
+
+
+
+    #talent3 {
+        max-width: 95%;
+        margin: 80px auto;
+    }
+    #talent3:before {
+        width: 100%;
+        height: 630px;
+        left: 0;
+    }
+    #talent3 > .talent3Bg {
+        width: 100%;
+        height: 300px;
+        float: none;
+        background-position: center;
+    }
+    #talent3 > .talent3Txt {
+        width: 100%;
+        float: none;
+        padding: 100px 10px 0 10px;
+    }
+
+
+    #talent4 {
+        max-width: 95%;
+        margin: 200px auto 140px auto;
+    }
+    #talent4 > .talent4Bg {
+        width: 100%;
+        height: 300px;
+        float: none;
+    }
+    #talent4 > .talent4Bg:after {
+        width: 100%;
+        height: 300px;
+        right: 0px;
+        bottom: -50px;
+    }
+    #talent4 > .talent4Txt {
+        width: 100%;
+        float: none;
+        padding: 100px 10px 0 10px;
+    }
+    
+    
+    #system1 {
+        max-width: 95%;
+    }
+    #system1 > .system1Bg {
+        height: 200px;
+    }
+    #system1 > .system1Bg > strong {
+        font-size: 35px;
+        padding: 80px 0;
+    }
+
+    #system1 > .system1Txt {
+        margin: 90px 0 50px 0;
+    }
+    #system1 > .system1Txt > p {
+        width: 90%;
+        font-size: 15px;
+        line-height: 28px;
+    }
+    
+    
+    #system2 {
+        max-width: 85%;
+        margin: 50px auto 100px auto;
+    }
+    #system2 > .circle > div {
+        width: 100%;
+        margin: 30px auto;
+        float: left;
+    }
+    #system2 > .circle > div:after {
+        top: 140px;
+        left: 20px;
+        width: 50px;
+        height: 50px;
+        background-size: 20px;
+        transform: rotate(90deg);
+        transition: all 0.5s;
+    }
+    #system2 > .circle > div > i {
+        font-size: 35px;
+        float: left;
+        width: 120px;
+        height: 120px;
+        line-height: 120px;
+        border-radius: 50%;
+    }
+    #system2 > .circle > div > span {
+        font-size: 22px;
+        margin: 25px 0 0 0;
+    }
+
+    #system2 > .circle > div:nth-child(2) > span {
+        font-size: 22px;
+        margin: 50px 0 0 0;
+    }
+
+    #system2 > .circle > div:nth-child(4) > span {
+        font-size: 22px;
+        margin: 50px 0 0 0;
+    }
+
+    #system2 > .circle > div:nth-child(5) > span {
+        font-size: 22px;
+        margin: 50px 0 0 0;
+    }
+
+
+    #system2 > .circle > div > p {
+        font-size: 14px;
+        padding: 0;
+        line-height: 20px;
+        margin-top: 10px;
+    }
+
+    #system2 > .circle > div > p > a{
+        font-size: 10px;
+    }
+
+
+
+}
