@@ -94,6 +94,7 @@ figure {
     max-width: 1024px;
     margin: 50px auto;
     padding: 0 20px;
+    z-index: 1;
 }
 .title > h3, h4, h5 {
     font-weight: 400;
@@ -161,6 +162,7 @@ figure {
     background-size: cover;
     background-attachment: fixed;
     padding: 10px 0;
+    z-index: -10;
 }
 
 #section2 .title:after {
@@ -173,7 +175,6 @@ figure {
     height: 3px;
     background: #FFB300;
 }
-
 
 #section2 > ul {
     max-width: 1024px;
@@ -204,8 +205,6 @@ figure {
     font-size: 18px;
     padding: 10px 20px;
 }
-
-
 
 #section3 {
     max-width: 1024px;
@@ -297,8 +296,25 @@ strong {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-    .title:after {
-        width: 60%;
+    #section1 .title:after {
+        top: 25px;
+        width: 90%;
+        height: 15px;
+        z-index: -10;
+    }
+
+    #section2 .title:after {
+        top: 25px;
+        width: 90%;
+        height: 15px;
+        z-index: -10;
+    }
+
+    #section3 .title:after {
+        top: 25px;
+        width: 90%;
+        height: 15px;
+        z-index: -10;
     }
 
     
@@ -320,6 +336,20 @@ strong {
     
     #figureTxt > h2 {
         font-size: 65px;
+    }
+
+    #section1 .title:after {
+        top: 25px;
+        width: 90%;
+        height: 15px;
+        z-index: -10;
+    }
+
+    #section2 .title:after {
+        top: 25px;
+        width: 90%;
+        height: 15px;
+        z-index: -10;
     }
     
     #section1 > .section1Img {
@@ -348,6 +378,14 @@ strong {
     #section2 {
         height: 450px;
     }
+
+    #section2 .title:after {
+        top: 25px;
+        width: 90%;
+        height: 15px;
+        z-index: -10;
+    }
+
     #section2 > ul {
         max-width: 100%;
     }
@@ -366,6 +404,14 @@ strong {
         max-width: 100%;
         margin: 50px auto 70px auto;
     }
+
+    #section3 .title:after {
+        top: 25px;
+        width: 90%;
+        height: 15px;
+        z-index: -10;
+    }
+
     #section3 > ul > li {
         width: 96%;
         margin: 30px 2%;
@@ -418,6 +464,13 @@ strong {
     #figureTxt > .fa-home, .right {
         font-size: 13px;
     }
+
+    #section1 .title:after {
+        top: 20px;
+        width: 90%;
+        height: 15px;
+        z-index: -10;
+    }
     
     #section1 > .section1Img {
         height: 300px;
@@ -443,10 +496,17 @@ strong {
         line-height: 30px;
     }
     
-    
     #section2 {
         height: 500px;
     }
+
+    #section2 .title:after {
+        top: 20px;
+        width: 90%;
+        height: 15px;
+        z-index: -10;
+    }
+
     #section2 > ul {
         max-width: 100%;
         margin: 30px auto;
@@ -471,6 +531,14 @@ strong {
         max-width: 100%;
         margin: 50px auto 50px auto;
     }
+
+    #section3 .title:after {
+        top: 20px;
+        width: 90%;
+        height: 15px;
+        z-index: -10;
+    }
+
     #section3 > ul > li {
         width: 96%;
         margin: 30px 2%;

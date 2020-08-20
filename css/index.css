@@ -286,7 +286,6 @@ html,body {
 
 .s3 > .information > .youtubeBox > img {
     width: 80px;
-    margin: 0 auto;
     display: block;
     margin: 252px auto 0;
     cursor: pointer;
@@ -894,9 +893,9 @@ html,body {
     .s3 > .information > .youtubeBox > a {
         height: 350px;
     }
-    .s3 > .information > .youtubeBox > a > img {
+    .s3 > .information > .youtubeBox > img {
         width: 55px;
-        padding: 150px 0;
+        margin: 180px auto 0;
     }
     
     
