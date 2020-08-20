@@ -115,8 +115,9 @@ footer > .footerBox > address {
     }
     footer > .footerBox > address {
         width: 100%;
+        padding-left: 5px;
         margin: 10px auto;
-        font-size: 14px;
+        font-size: 12px;
         line-height: 21px;
     }
     
