@@ -1,0 +1,461 @@
+@charset "utf-8";
+@import url(reset.css);
+@font-face {
+    font-family: 'NanumSquare';
+    src: local('font/NanumSquare'),
+        url('../font/NanumSquareR.ttf'),
+        url('../font/NanumSquareR.eot'),
+        url('../font/NanumSquareR.woff');
+}
+@font-face {
+    font-family: 'NanumSquareL';
+    src: url('../font/NanumSquareL.ttf'),
+        url('../font/NanumSquareL.eot'),
+        url('../font/NanumSquareL.woff');
+}
+@font-face {
+    font-family: 'NanumSquareB';
+    src: url('../font/NanumSquareB.ttf'),
+        url('../font/NanumSquareB.eot'),
+        url('../font/NanumSquareB.woff');
+}
+@font-face {
+    font-family: 'NanumSquareEB';
+    src: url('../font/NanumSquareEB.ttf'),
+        url('../font/NanumSquareEB.eot'),
+        url('../font/NanumSquareEB.woff');
+}
+
+html,body {
+    font-family: 'NanumSquare';
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    color: #1c1c1b;
+}
+
+figure {
+    max-width: 100%;
+    height: 500px;
+    position: relative;
+    background: url(../images/businessBg.jpg) no-repeat;
+    background-attachment: fixed;
+    font-family: 'Noto Sans KR', sans-serif !important;
+}
+
+#figureTxt {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 160px 20px 0 20px;
+    color: #f9f9f9;
+}
+#figureTxt > h2 {
+    font-weight: 700;
+    letter-spacing: 5px;
+    font-size: 75px;
+    margin-bottom: 50px;
+}
+#figureTxt > span {
+    margin: 0 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+#figureTxt > .fa-home, .right {
+    color: #FFB300;
+    font-size: 14px;
+}
+
+.tab {
+    width: 1024px;
+    height: 60px;
+    line-height: 60px;
+    background: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    position: absolute;
+    bottom: 0;
+}
+.tab:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.tab > li {
+    font-size: 18px;
+    float: left;
+    width: 50%;
+    text-align: center;
+    border-bottom: 1px solid #efeeee;
+}
+.tab > li > a {
+    display: block;
+} 
+.on {
+    font-family: "NanumSquareEB";
+    color: #f9f9f9;
+    background: #008837;
+}
+
+#container {
+    max-width: 100%;
+    margin: 50px auto;
+    position: relative;
+}
+
+.elevator {
+    max-width: 1024px;
+    position: relative;
+    margin: 0 auto;
+}
+.escalator {
+    max-width: 1024px;
+    position: relative;
+    margin: 0 auto;
+}
+.elevator > .bg {
+    position: relative;
+    height: 400px;
+    background: url(../images/sub02_elevator.jpg) center no-repeat;
+    background-size: cover;
+}
+.escalator > .bg {
+    position: relative;
+    height: 400px;
+    background: url(../images/sub02_escalator.jpg) center no-repeat;
+    background-size: cover;
+}
+.bg > .title {
+    width: 500px;
+    height: 250px;
+    background: #008837;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #f9f9f9;
+    padding: 30px;
+}
+
+.bg > .title > img {
+    width: 50px;
+}
+
+.bg > .title > span {
+    display: block;
+    font-size: 27px;
+    letter-spacing: 1px;
+    font-family: "NanumSquareEB";
+    margin: 15px 0;
+}
+.bg > .title > p {
+    line-height: 23px;
+}
+
+.contents {
+    position: relative;
+    margin: 100px auto;
+}
+.contents:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.contents > h3{
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.contents > h3:nth-child(1){
+    color: #008837;
+    font-weight: bold;
+}
+
+.contents > h3:nth-child(2) {
+    margin: 10px 0 100px 0;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.contents > h3 > strong {
+    color: #2b3381;
+}
+.contents > .txt {
+    width: 32%;
+    float: left;
+}
+
+.contents > .txt.t2{
+    margin: 0 2%;
+}
+
+.contents > .txt.t5{
+    margin: 0 2%;
+}
+
+.contents > .txt > span {
+    display: block;
+    font-size: 23px;
+    color: #2b3381;
+}
+.contents > .txt > strong {
+    position: relative;
+    display: block;
+    font-family: 'Noto Sans KR', sans-serif !important;
+    font-size: 17px;
+    margin: 20px 0 30px 0;
+}
+.contents > .txt > strong:after {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 1px;
+    top: 15px;
+    right: 0;
+    background: #1c1c1b;
+}
+
+.contents > .txt.t3 > strong:after {
+    width: 68%;
+}
+
+.contents > .txt.t4 > strong:after {
+    width: 35%;
+}
+
+.contents > .txt.t5 > strong:after {
+    width: 73%;
+}
+
+.contents > .txt.t6 > strong:after {
+    width: 50%;
+}
+
+.contents > .txt > p {
+    line-height: 23px;
+    margin-bottom: 30px;
+}
+
+
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .tab {
+        width: 100%;
+    }
+    
+    .elevator {
+        max-width: 95%;
+    }
+    .escalator {
+        max-width: 95%;
+    }
+    
+    
+    .contents {
+        margin: 80px auto;
+    }
+    .contents > h3 {
+        font-size: 28px;
+        margin-bottom: 80px;
+    }
+    
+    .contents > .txt > strong:after {
+        width: 55%;
+    }
+    
+    .contents > .txt:nth-child(3) > .light:after {
+        width: 65%;
+    }
+
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    #figureTxt > h2 {
+        font-size: 65px;
+    }
+    
+    .tab {
+        width: 100%;
+        height: 55px;
+        line-height: 55px;
+    }
+    .tab > li {
+        font-size: 17px;
+    }
+    
+    .elevator {
+        max-width: 95%;
+    }
+    .escalator {
+        max-width: 95%;
+    }
+    .bg > .title {
+        width: 100%;
+        height: 200px;
+        padding: 20px;
+        background: rgba(30,57,99,0.8);
+    }
+    .bg > .title > img {
+        width: 45px;
+    }
+    .bg > .title > span {
+        font-size: 25px;
+        margin: 10px 0;
+    }
+    .bg > .title > p {
+        line-height: 21px;
+    }
+    
+    
+    .contents {
+        margin: 70px auto;
+    }
+    .contents > h3 {
+        font-size: 24px;
+        margin-bottom: 70px;
+    }
+    .contents > .txt {
+        width: 100%;
+        float: none;
+        margin-bottom: 50px;
+    }
+    .contents > .txt:nth-child(3) {
+        margin: 0 0 50px 0;
+    }
+    .contents > .txt > span {
+        font-size: 23px;
+    }
+    .contents > .txt > strong {
+        font-size: 17px;
+        margin: 20px 0 30px 0;
+    }
+    .contents > .txt > strong:after {
+        width: 75%;
+        top: 8px;
+    }
+    .contents > .txt:nth-child(3) > strong:after {
+        width: 85%;
+    }
+    .contents > .txt:nth-child(4) > strong:after {
+        width: 85%;
+    }
+    .contents > .txt:nth-child(3) > .light:after {
+        width: 80%;
+    }
+    .contents > .txt:nth-child(4) > .light:after {
+        width: 80%;
+    }
+    .contents > .txt > p {
+        line-height: 23px;
+        margin-bottom: 30px;
+    }
+    .contents > .txt > img {
+        width: 100%;
+    }
+}
+
+@media all and (max-width: 480px) {   
+    #figureTxt > h2 {
+        font-size: 55px;
+    }
+    #figureTxt > span {
+        font-size: 15px;
+    }
+    #figureTxt > .fa-home, .right {
+        font-size: 13px;
+    }
+    
+    
+    .tab {
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+    }
+    .tab > li {
+        font-size: 16px;
+    }
+    
+    .elevator {
+        max-width: 95%;
+    }
+    .escalator {
+        max-width: 95%;
+    }
+    .elevator > .bg {
+        height: 400px;
+    }
+    .escalator > .bg {
+        height: 400px;
+    }
+    .bg > .title {
+        width: 100%;
+        height: 200px;
+        padding: 15px 20px;
+        background: rgba(30,57,99,0.8);
+    }
+    .bg > .title > img {
+        width: 40px;
+    }
+    .bg > .title > span {
+        font-size: 21px;
+        margin: 10px 0;
+    }
+    .bg > .title > p {
+        font-size: 15px;
+        line-height: 21px;
+    }
+    
+    
+    .contents {
+        margin: 70px auto;
+    }
+    .contents > h3 {
+        font-size: 23px;
+        line-height: 27px;
+        margin-bottom: 70px;
+    }
+    .contents > .txt {
+        width: 100%;
+        float: none;
+        margin-bottom: 50px;
+    }
+    .contents > .txt:nth-child(3) {
+        margin: 0 0 50px 0;
+    }
+    .contents > .txt > span {
+        font-size: 21px;
+    }
+    .contents > .txt > strong {
+        font-size: 16px;
+        margin: 20px 0 30px 0;
+    }
+    .contents > .txt > strong:after {
+        width: 70%;
+        top: 8px;
+    }
+    .contents > .txt:nth-child(3) > strong:after {
+        width: 85%;
+    }
+    .contents > .txt:nth-child(4) > strong:after {
+        width: 85%;
+    }
+    .contents > .txt:nth-child(3) > .light:after {
+        width: 80%;
+    }
+    .contents > .txt:nth-child(4) > .light:after {
+        width: 80%;
+    }
+    .contents > .txt > p {
+        font-size: 15px;
+        line-height: 21px;
+        margin-bottom: 30px;
+    }
+    .contents > .txt > img {
+        width: 100%;
+    }
+
+    
+
+}
