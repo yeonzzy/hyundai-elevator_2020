@@ -61,28 +61,28 @@ html,body {
 }
 
 
-.s1 > .innovation {
+.s1 > .hyundai-ele {
     margin: 0 auto;
     width: 80%;
     padding: 300px 0;
 }
 
-.s1 > .innovation > .centerTxt{
+.s1 > .hyundai-ele > .centerTxt{
     font-family: 'Noto Sans KR', sans-serif !important;
 }
 
-.s1 > .innovation > h2 {
+.s1 > .hyundai-ele > h2 {
     font-family: 'Teko', sans-serif;
     letter-spacing: 1px;
     font-size: 120px;
     text-shadow: 1px 1px 1px #242424;
 }
-.s1 > .innovation > .innoTxt {
+.s1 > .hyundai-ele > .eleTxt {
     font-size: 19px;
     margin-top: -20px;
     line-height: 25px;
 }
-.s1 > .innovation > a {
+.s1 > .hyundai-ele > a {
     position: relative;
     margin-top: 80px;
     display: block;
@@ -440,18 +440,14 @@ html,body {
     margin: 30px auto 0;
 }
 
-
-
-
-
 /*화살표 아래 방향으로 반복*/
-.fa-angle-double-down {
+.fa-mouse {
     width: 100%;
     text-align: center;
     position: absolute;
     bottom: 50px;
-    font-size: 30px;
-    color: #f9f9f9;
+    font-size: 25px;
+    color: #f9f9f99f;
     -webkit-animation: slide-bottom 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite alternate both;
     animation: slide-bottom 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite alternate both;
 }
@@ -522,13 +518,13 @@ html,body {
         font-size: 26px;
     }
 
-    .s1 > .innovation > h2 {
+    .s1 > .hyundai-ele > h2 {
         font-size: 120px;
     }
-    .s1 > .innovation > .innoTxt {
+    .s1 > .hyundai-ele > .eleTxt {
         font-size: 18px;
     }
-    .s1 > .innovation > a {
+    .s1 > .hyundai-ele > a {
         font-size: 19px;
     }
     
@@ -576,13 +572,13 @@ html,body {
     
 
 
-    .s1 > .innovation > h2 {
+    .s1 > .hyundai-ele > h2 {
         font-size: 90px;
     }
-    .s1 > .innovation > .innoTxt {
+    .s1 > .hyundai-ele > .eleTxt {
         font-size: 17px;
     }
-    .s1 > .innovation > a {
+    .s1 > .hyundai-ele > a {
         margin-top: 70px;
         width: 240px;
         height: 45px;
@@ -786,19 +782,19 @@ html,body {
     }
 
 
-    .s1 > .innovation {
+    .s1 > .hyundai-ele {
         width: 90%;
         padding: 200px 0;
     }
-    .s1 > .innovation > h2 {
+    .s1 > .hyundai-ele > h2 {
         font-size: 65px;
     }
-    .s1 > .innovation > .innoTxt {
+    .s1 > .hyundai-ele > .eleTxt {
         font-size: 15px;
         margin-top: -20px;
         line-height: 25px;
     }
-    .s1 > .innovation > a {
+    .s1 > .hyundai-ele > a {
         margin-top: 50px;
         width: 200px;
         height: 40px;
