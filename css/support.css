@@ -1,0 +1,254 @@
+@charset "utf-8";
+@import url(commons/reset.css);
+@import url(commons/header.css);
+@import url(commons/footer-sub.css);
+@font-face {
+    font-family: 'NanumSquare';
+    src: local('font/NanumSquare'),
+        url('../font/NanumSquareR.ttf'),
+        url('../font/NanumSquareR.eot'),
+        url('../font/NanumSquareR.woff');
+}
+@font-face {
+    font-family: 'NanumSquareL';
+    src: url('../font/NanumSquareL.ttf'),
+        url('../font/NanumSquareL.eot'),
+        url('../font/NanumSquareL.woff');
+}
+@font-face {
+    font-family: 'NanumSquareB';
+    src: url('../font/NanumSquareB.ttf'),
+        url('../font/NanumSquareB.eot'),
+        url('../font/NanumSquareB.woff');
+}
+@font-face {
+    font-family: 'NanumSquareEB';
+    src: url('../font/NanumSquareEB.ttf'),
+        url('../font/NanumSquareEB.eot'),
+        url('../font/NanumSquareEB.woff');
+}
+
+html,body {
+    font-family: 'NanumSquare';
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    color: #1c1c1b;
+}
+
+
+figure {
+    max-width: 100%;
+    height: 500px;
+    position: relative;
+    background: url(../img/06_support/sub05_figure-bg.jpg) no-repeat;
+    background-attachment: fixed;
+    font-family: 'Noto Sans KR', sans-serif !important;
+}
+#figureTxt {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 160px 20px 0 20px;
+    color: #f9f9f9;
+}
+#figureTxt > h2 {
+    font-weight: 700;
+    letter-spacing: 5px;
+    font-size: 75px;
+    margin-bottom: 50px;
+}
+#figureTxt > span {
+    margin: 0 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+#figureTxt > .fa-home, .right {
+    color: #FFB300;
+    font-size: 14px;
+}
+
+#container {
+    max-width: 100%;
+    margin: 50px auto 100px auto;
+    position: relative;
+}
+.map {
+    display: block;
+    width: 1024px;
+    height: 450px;
+    margin: 0 auto;
+}
+.map_contents {
+    position: relative;
+    max-width: 1024px;
+    margin: 0 auto;
+    border-bottom: 1px solid #e6e6e6;
+}
+.map_contents:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.map_contents > .address {
+    width: 64%;
+    float: left;
+    padding: 20px;
+}
+.map_contents > .address > h3 {
+    width: 180px;
+    float: left;
+}
+.map_contents > .address > p {
+    float: left;
+    padding: 5px 0 0 25px;
+    font-family: "NanumSquareB";
+    font-size: 18px;
+    color: #8f8f8e;
+}
+.map_contents > .contact {
+    width: 36%;
+    float: right;
+    padding-top: 20px;
+}
+.map_contents > .contact:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.map_contents .contact > span {
+    display: block;
+    float: right;
+    margin-right: 10px;
+} 
+
+.map_contents .contact > span::before{
+    content: '';
+    width: 30px;
+    height: 30px;
+    display: block;
+    float: left;
+    padding: 0 5px 0 0;
+    background: url(../img/06_support/sub05_contact_tel_icon.png) no-repeat;
+    background-size: 20px;
+    background-position: center;
+}
+
+.map_contents > .contact > span {
+    color: #1c1c1b;
+    line-height: 30px;
+    margin-right: 20px;
+}
+
+.map_contents > .contact > span strong{
+    color: #008837;
+}
+
+
+/*미디어쿼리*/
+@media (min-width: 768px) and (max-width: 1024px) {
+    .map {
+        width: 95%;
+        height: 450px;
+    }
+    .map_contents {
+        max-width: 95%;
+    }
+
+    .map_contents > .address {
+        width: 100%;
+        padding: 20px 0 10px 10px;
+    }
+
+    .map_contents > .address > p {
+        padding: 2px 0 0 15px;
+    }
+
+    .map_contents > .contact {
+        width: 100%;
+        margin: 10px 0;
+        padding : 0 0 0 8px;
+        float: unset;
+    }
+    .map_contents .contact > span {
+        float: unset;
+        margin-right: 0;
+    } 
+
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    #figureTxt > h2 {
+        font-size: 65px;
+    }
+    
+    .map {
+        width: 95%;
+        height: 450px;
+    }
+    .map_contents {
+        max-width: 95%;
+    }
+
+    .map_contents > .address {
+        width: 100%;
+        padding: 20px 0 10px 10px;
+    }
+
+    .map_contents > .address > p {
+        padding: 2px 0 0 5px;
+    }
+
+    .map_contents > .contact {
+        width: 100%;
+        margin: 10px 0;
+        padding : 0 0 0 8px;
+        float: unset;
+    }
+    .map_contents .contact > span {
+        float: unset;
+        margin-right: 0;
+    }
+}
+
+@media all and (max-width: 480px) {   
+    #figureTxt > h2 {
+        font-size: 55px;
+    }
+    #figureTxt > span {
+        font-size: 15px;
+    }
+    #figureTxt > .fa-home, .right {
+        font-size: 13px;
+    }
+    
+    
+    .map {
+        width: 95%;
+        height: 450px;
+    }
+    .map_contents {
+        max-width: 95%;
+    }
+
+    .map_contents > .address {
+        width: 100%;
+        padding: 20px 0 10px 10px;
+    }
+
+    .map_contents > .address > p {
+        padding: 2px 0 0 5px;
+    }
+
+    .map_contents > .contact {
+        width: 100%;
+        margin: 10px 0;
+        padding : 0 0 0 8px;
+        float: unset;
+    }
+    .map_contents .contact > span {
+        float: unset;
+        margin-right: 0;
+    }
+
+
+}
