@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <title>현대엘리베이터</title>
     <meta name="viewport" content="width=device-width , initial-scale=1.0">    
-    <link rel="stylesheet" href="../css/business.css">
-    <link rel="icon" href="../img/000_favicon/favicon.png" type="image/png">
+    <link rel="stylesheet" href="css/business.css">
+    <link rel="icon" href="img/000_favicon/favicon.png" type="image/png">
     
-    <script src="../js/00_commons/jquery-3.4.1.min.js"></script>
-    <script src="../js/00_commons/prefixfree.min.js"></script>
-    <script src="../js/00_commons/jquery.easing.1.3.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/refixfree.min.js"></script>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />  
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
@@ -18,8 +18,8 @@
     <script>
         $(document).ready(function(){
             
-            $("header").load("commons/header.html");
-            $("footer").load("commons/footer.html");
+            $("header").load("header.html");
+            $("footer").load("footer.html");
             
             
             //탭메뉴 버튼 클래스 변경
@@ -34,11 +34,45 @@
                 $(".tab > li").eq(i).addClass('on');
                 $("#container > div").eq(i).show();
             });
+
+            //scroll에 따른 header 변화
+            $(window).scroll(function () {
+                var windowScroll = $(window).scrollTop();
+                if (windowScroll > 10) {
+                    $("header").css({
+                        background: "rgba(255,255,255,0.9)",
+                        "border-bottom": "1px solid #dbdbdb",
+                        color: "#1e3963",
+                        transition: "all 0.5s",
+                    });
+                    $("header > #main_menu > img").attr(
+                        "src",
+                        "img/00_commons/header/hamburger_menu_scroll.png"
+                    );
+                    $("header > h1 > a> img").attr(
+                        "src",
+                        "img/00_commons/header/main_logo.png"
+                    );
+                } else {
+                    $("header").css({
+                        background: "rgba(0,0,0,0.3)",
+                        border: "none",
+                        color: "#f9f9f9",
+                        transition: "all 0.5s",
+                    });
+                    $("header > #main_menu > img").attr(
+                        "src",
+                        "img/00_commons/header/hamburger_menu.png"
+                    );
+                    $("header > h1 > a> img").attr(
+                        "src",
+                        "img/00_commons/header/main_white_logo.png"
+                    );
+                }
+            });
             
         });
     </script>
-    <!--scroll에 따른 header 변화-->
-    <script type="text/javascript" src="../js/00_commons/scroll-header.js"></script>
         
 </head>
 <body>
@@ -47,7 +81,7 @@
     <figure>
         <div id="figureTxt">
             <h2>BUSINESS</h2>
-            <i class="fas fa-home"></i><span><a href="../index.html">Home</a></span><span class="right">></span><span><a href="business.html">Business</a></span>
+            <i class="fas fa-home"></i><span><a href="index.html">Home</a></span><span class="right">></span><span><a href="business.html">Business</a></span>
         </div>
         <ul class="tab">
             <li class="on"><a href="#">엘리베이터</a></li>
@@ -59,7 +93,7 @@
         <div class="elevator">
             <div class="bg">
                 <div class="title">
-                    <img src="../img/03_business/sub02_con_elevator_icon.png" alt="엘리베이터아이콘">
+                    <img src="img/03_business/sub02_con_elevator_icon.png" alt="엘리베이터아이콘">
                     <span>엘리베이터</span>
                     <p>고속 제품에서 느낄 수 있는 편안한 승차감과 함께 경제성, 친환경성까지 갖춘 국내 최고 중저속 기어리스 엘리베이터</p>
                 </div>
@@ -72,26 +106,26 @@
                     <strong>Excellent ride</strong>
                     <p>영구자석을 이용한 동기모터를 적용함으로써 유도 전동기 대비 25% 에너지가 절감됩니다.
                         기어오일을 사용하지 않아 오일 교체가 필요 없고 유지관리가 편리하며, 관리 비용까지 줄어듭니다.</p>
-                    <img src="../img/03_business/sub02_con_elevator_ride.jpg" alt="변압기사진">
+                    <img src="img/03_business/sub02_con_elevator_ride.jpg" alt="변압기사진">
                 </div>
                 <div class="txt t2">
                     <span>획기적 에너지 절감</span>
                     <strong>Saving energy</strong>
                     <p>국내 승강기 최초로 독일계 시험인증기관 TUV SUD로부터 독일의 기술 협회인 VDI에서 제정한 에너지 효율 등급 기준의 최고 등급인 A등급을 인증 받았습니다.</p>
-                    <img src="../img/03_business/sub02_con_elevator_energy.jpg" alt="재료사진">
+                    <img src="img/03_business/sub02_con_elevator_energy.jpg" alt="재료사진">
                 </div>
                 <div class="txt t3">
                     <span>최고의 안전성</span>
                     <strong>Best safety</strong>
                     <p>한쪽 브레이크가 작동되지 않더라도 다른 한쪽이 별도로 작동하는 이중 브레이크 시스템을 채용하여 안전성을 대폭 강화하였습니다.(유럽 국제안전기준 EN81 규격 적합)</p>
-                    <img src="../img/03_business/sub02_con_elevator_safety.jpg" alt="송변전사진">
+                    <img src="img/03_business/sub02_con_elevator_safety.jpg" alt="송변전사진">
                 </div>
             </div>
         </div>
         <div class="escalator">
             <div class="bg">
                 <div class="title">
-                    <img src="../img/03_business/sub02_con_escalator_icon.png" alt="에스컬레이터아이콘">
+                    <img src="img/03_business/sub02_con_escalator_icon.png" alt="에스컬레이터아이콘">
                     <span>에스컬레이터</span>
                     <p>단절된 공간을 이어주는 현대엘리베이터의 에스컬레이터와 무빙워크는 편안한 승차감과 안전성, 경제성을 고루 갖췄습니다.</p>
                 </div>
@@ -103,19 +137,19 @@
                     <span>자동 운전 시스템</span>
                     <strong>Automatic driving system</strong>
                     <p>라이더 센서가 접근하는 승객을 감지하여 에스컬레이터가 자동으로 작동합니다</p>
-                    <img src="../img/03_business/sub02_con_escalator_driving.jpg" alt="자동운전시스템사진">
+                    <img src="img/03_business/sub02_con_escalator_driving.jpg" alt="자동운전시스템사진">
                 </div>
                 <div class="txt t5">
                     <span>멀티포스트</span>
                     <strong>Muti-post</strong>
                     <p>에스컬레이터/무빙워크의 진입방향을 표시해주는 안전장치입니다.</p>
-                    <img src="../img/03_business/sub02_con_escalator_multiPost.jpg" alt="멀티포스트사진">
+                    <img src="img/03_business/sub02_con_escalator_multiPost.jpg" alt="멀티포스트사진">
                 </div>
                 <div class="txt t6">
                     <span>고장/운행정보 장치</span>
                     <strong>Information device</strong>
                     <p>고장 데이터 및 운행정보를 모니터링 시스템에 전송시켜 유지관리가 편리합니다.</p>
-                    <img src="../img/03_business/sub02_con_escalator_device.jpg" alt="정보장치사진">
+                    <img src="img/03_business/sub02_con_escalator_device.jpg" alt="정보장치사진">
                 </div>
             </div>
         </div>

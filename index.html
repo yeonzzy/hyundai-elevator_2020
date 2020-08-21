@@ -8,29 +8,31 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="icon" href="img/000_favicon/favicon.png" type="image/png">
 
-    <script src="js/00_commons/jquery-3.4.1.min.js"></script>
-    <script src="js/00_commons/prefixfree.min.js"></script>
-    <script src="js/00_commons/jquery.easing.1.3.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/prefixfree.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/fontawesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/solid.min.css">
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
     <link href="https://fonts.googleapis.com/css?family=Teko:300,400,500,600,700&display=swap" rel="stylesheet">
 
     <!--window 로드 시 실행!!!!-->
     <script type="text/javascript">
+        $(document).ready(function () {
+            $("header").load("header.html");
+            $("footer").load("footer.html");
+        });
+
         $(function () {
             window.onload = function () {
                 setTimeout(function () {
                     scrollTo(0, 0);
                 }, 100);
             }
-
-            $("header").load("html/commons/header.html");
-            $("footer").load("html/commons/footer.html");
 
             /*오른쪽 고정 BtnCircle Click 시 !!*/
             $(".btn_list li").click(function () {
@@ -73,41 +75,41 @@
             var select = ".section";
             $(select).each(function (index) {
 
-            // 개별적으로 Wheel 이벤트 적용
-            $(this).on("mousewheel DOMMouseScroll", function (e) {
-                e.preventDefault();
-                var delta = 0;
-                if (!event) event = window.event;
-                if (event.wheelDelta) {
-                    delta = event.wheelDelta / 120;
-                    if (window.opera) delta = -delta;
-                }
-                else if (event.detail)
-                delta = -event.detail / 3;
-                var moveScorll = $(window).scrollTop();
-                var section = $(select).eq(index);
-
-                // 마우스휠을 위에서 아래로
-                if (delta < 0) {
-                    if ($(section).next() != undefined) {
-                        try {
-                            moveScorll = $(section).next().offset().top;
-                        } catch (e) { }
+                // 개별적으로 Wheel 이벤트 적용
+                $(this).on("mousewheel DOMMouseScroll", function (e) {
+                    e.preventDefault();
+                    var delta = 0;
+                    if (!event) event = window.event;
+                    if (event.wheelDelta) {
+                        delta = event.wheelDelta / 120;
+                        if (window.opera) delta = -delta;
                     }
+                    else if (event.detail)
+                        delta = -event.detail / 3;
+                    var moveScorll = $(window).scrollTop();
+                    var section = $(select).eq(index);
 
-                // 마우스휠을 아래에서 위로
-                } else {
-                    if ($(section).prev() != undefined) {
-                        try {
-                            moveScorll = $(section).prev().offset().top;
-                        } catch (e) { }
+                    // 마우스휠을 위에서 아래로
+                    if (delta < 0) {
+                        if ($(section).next() != undefined) {
+                            try {
+                                moveScorll = $(section).next().offset().top;
+                            } catch (e) { }
+                        }
+
+                        // 마우스휠을 아래에서 위로
+                    } else {
+                        if ($(section).prev() != undefined) {
+                            try {
+                                moveScorll = $(section).prev().offset().top;
+                            } catch (e) { }
+                        }
                     }
-                }
-                $("html,body").stop().animate({
-                    scrollTop: moveScorll + 'px'
-                }, { duration: 900, complete: function () { } });
+                    $("html,body").stop().animate({
+                        scrollTop: moveScorll + 'px'
+                    }, { duration: 900, complete: function () { } });
+                });
             });
-        });
 
             //버튼, youtubeBox>img hover시 선 생성
             $(".line1, .line2, .line3, .line4").hide();
@@ -147,12 +149,44 @@
                 e.preventDefault();
                 autoPlayVideo("uJi6MpHAEh4", "100%", "550px");
             });
+
+            //scroll에 따른 header 변화
+            $(window).scroll(function () {
+                var windowScroll = $(window).scrollTop();
+                if (windowScroll > 10) {
+                    $("header").css({
+                        background: "rgba(255,255,255,0.9)",
+                        "border-bottom": "1px solid #dbdbdb",
+                        color: "#1e3963",
+                        transition: "all 0.5s",
+                    });
+                    $("header > #main_menu > img").attr(
+                        "src",
+                        "img/00_commons/header/hamburger_menu_scroll.png"
+                    );
+                    $("header > h1 > a> img").attr(
+                        "src",
+                        "img/00_commons/header/main_logo.png"
+                    );
+                } else {
+                    $("header").css({
+                        background: "rgba(0,0,0,0.3)",
+                        border: "none",
+                        color: "#f9f9f9",
+                        transition: "all 0.5s",
+                    });
+                    $("header > #main_menu > img").attr(
+                        "src",
+                        "img/00_commons/header/hamburger_menu.png"
+                    );
+                    $("header > h1 > a> img").attr(
+                        "src",
+                        "img/00_commons/header/main_white_logo.png"
+                    );
+                }
+            });
         });
     </script>
-    <!--scroll에 따른 header 변화-->
-    <script type="text/javascript" src="../js/00_commons/scroll-header.js"></script>
-    
-
 </head>
 
 <body>
@@ -175,7 +209,8 @@
                     <div class="line2"></div>
                     <div class="line3"></div>
                     <div class="line4"></div>
-                    VIEW</a>
+                    VIEW
+                </a>
             </div>
             <i class="fas fa-mouse"></i>
         </div>
@@ -247,7 +282,7 @@
                             <span>회사소개</span>
                             <p>항상 새로운 가능성을 생각하며 다가올 미래를 준비합니다.</p>
                             <a href="html/about.html">
-                                <img src="img/01_index/section04/sec04_plus-white_icon.png"alt="회사소개버튼">
+                                <img src="img/01_index/section04/sec04_plus-white_icon.png" alt="회사소개버튼">
                             </a>
                         </div>
                     </div>

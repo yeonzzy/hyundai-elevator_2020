@@ -336,6 +336,7 @@ figure {
         float: none;
         margin-bottom: 50px;
     }
+
     .contents > .txt.t2 {
         margin: 50px 0;
     }
@@ -402,7 +403,7 @@ figure {
         width: 100%;
         height: 200px;
         padding: 15px 20px;
-        background: rgba(30,57,99,0.8);
+        background: #0088368e;
     }
     .bg > .title > img {
         width: 40px;
@@ -415,47 +416,59 @@ figure {
         font-size: 15px;
         line-height: 21px;
     }
-    
-    
     .contents {
         margin: 70px auto;
     }
     .contents > h3 {
         font-size: 23px;
         line-height: 27px;
-        margin-bottom: 70px;
     }
     .contents > .txt {
         width: 100%;
         float: none;
-        margin-bottom: 50px;
+        margin-bottom: 0px;
     }
-    .contents > .txt:nth-child(3) {
-        margin: 0 0 50px 0;
-    }
+
     .contents > .txt > span {
         font-size: 21px;
     }
-    .contents > .txt > strong {
-        font-size: 16px;
-        margin: 20px 0 30px 0;
+
+    .contents > .txt{
+        font-size: 14px;
     }
+
+    .contents > .txt.t2{
+        margin: 50px 0;
+    }
+    
+    .contents > .txt.t5{
+        margin: 50px 0;
+    }
+
     .contents > .txt > strong:after {
+        width: 65%;
+    }
+    
+    .contents > .txt.t2 > strong:after {
+        width: 62%;
+    }
+
+    .contents > .txt.t3 > strong:after {
         width: 70%;
-        top: 8px;
     }
-    .contents > .txt:nth-child(3) > strong:after {
-        width: 85%;
+
+    .contents > .txt.t4 > strong:after {
+        width: 40%;
     }
-    .contents > .txt:nth-child(4) > strong:after {
-        width: 85%;
+    
+    .contents > .txt.t5 > strong:after {
+        width: 75%;
     }
-    .contents > .txt:nth-child(3) > .light:after {
-        width: 80%;
+    
+    .contents > .txt.t6 > strong:after {
+        width: 50%;
     }
-    .contents > .txt:nth-child(4) > .light:after {
-        width: 80%;
-    }
+
     .contents > .txt > p {
         font-size: 15px;
         line-height: 21px;
