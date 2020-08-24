@@ -1,32 +1,32 @@
 @charset "utf-8";
-@import url(commons/reset.css);
-@import url(commons/header.css);
-@import url(commons/footer.css);
+@import url(http://yeonzzy.dothome.co.kr/hyundai-elevator/css/commons/reset.css);
+@import url(http://yeonzzy.dothome.co.kr/hyundai-elevator/css/commons/header.css);
+@import url(http://yeonzzy.dothome.co.kr/hyundai-elevator/css/commons/footer.css);
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700;900&display=swap');
 @font-face {
     font-family: 'NanumSquare';
     src: local('font/NanumSquare'),
-        url('../font/NanumSquareR.ttf'),
-        url('../font/NanumSquareR.eot'),
-        url('../font/NanumSquareR.woff');
+        url('http://yeonzzy.dothome.co.kr/hyundai-elevator/font/NanumSquareR.ttf'),
+        url('http://yeonzzy.dothome.co.kr/hyundai-elevator/font/NanumSquareR.eot'),
+        url('http://yeonzzy.dothome.co.kr/hyundai-elevator/font/NanumSquareR.woff');
 }
 @font-face {
     font-family: 'NanumSquareL';
-    src: url('../font/NanumSquareL.ttf'),
-        url('../font/NanumSquareL.eot'),
-        url('../font/NanumSquareL.woff');
+    src: url('http://yeonzzy.dothome.co.kr/hyundai-elevator/font/NanumSquareL.ttf'),
+        url('http://yeonzzy.dothome.co.kr/hyundai-elevator/font/NanumSquareL.eot'),
+        url('http://yeonzzy.dothome.co.kr/hyundai-elevator/font/NanumSquareL.woff');
 }
 @font-face {
     font-family: 'NanumSquareB';
-    src: url('../font/NanumSquareB.ttf'),
-        url('../font/NanumSquareB.eot'),
-        url('../font/NanumSquareB.woff');
+    src: url('http://yeonzzy.dothome.co.kr/hyundai-elevator/font/NanumSquareB.ttf'),
+        url('http://yeonzzy.dothome.co.kr/hyundai-elevator/font/NanumSquareB.eot'),
+        url('http://yeonzzy.dothome.co.kr/hyundai-elevator/font/NanumSquareB.woff');
 }
 @font-face {
     font-family: 'NanumSquareEB';
-    src: url('../font/NanumSquareEB.ttf'),
-        url('../font/NanumSquareEB.eot'),
-        url('../font/NanumSquareEB.woff');
+    src: url('http://yeonzzy.dothome.co.kr/hyundai-elevator/font/NanumSquareEB.ttf'),
+        url('http://yeonzzy.dothome.co.kr/hyundai-elevator/font/NanumSquareEB.eot'),
+        url('http://yeonzzy.dothome.co.kr/hyundai-elevator/font/NanumSquareEB.woff');
 }
 
 body::-webkit-scrollbar {display: none;} 
@@ -39,19 +39,67 @@ html,body {
 }
 
 
-#wrap {width: 100%; height: 100vh;position: relative;}
-.section{ width:100%; height:100vh; position:relative; color:#f9f9f9;}
-.btn_list{position: fixed; right: 10px; top: 45%; width: 3%; text-align: center;}
-.btn_list li{width: 30px; height: 30px; cursor: pointer;}
-.btn_list li i{color: rgba(255,255,255,0.3); font-size: 8px; display: inline-block; transition: 0.5s;}
-.btn_list li i.on{color: rgba(255,255,255,1); font-size: 12px; transition: 0.5s;}
+#wrap {
+    width: 100%; 
+    height: 100vh;
+    position: relative;
+}
 
-.s1{background: url(../img/01_index/section01/sec01-bg.jpg) no-repeat; background-attachment: fixed; background-size: cover; }
-.s2{background: url(../img/01_index/section02/sec02-bg.jpg) no-repeat; background-attachment: fixed; background-size: cover; }
-.s3{background: url(../img/01_index/section03/sec03-bg.jpg) no-repeat; background-attachment: fixed; background-size: cover; }
-.s4{background: url(../img/01_index/section04/sec04-bg.jpg) no-repeat; background-attachment: fixed; background-size: cover; }
+.section{ 
+    width:100%; 
+    height:100vh; 
+    position:relative; 
+    color:#f9f9f9;
+}
 
+.btn_list{
+    position: fixed; 
+    right: 10px; top: 45%; 
+    width: 3%; 
+    text-align: center;
+}
 
+.btn_list li{
+    width: 30px; 
+    height: 30px; 
+    cursor: pointer;
+}
+
+.btn_list li i{
+    color: rgba(255,255,255,0.3); 
+    font-size: 8px; 
+    display: inline-block; 
+    transition: 0.5s;
+}
+
+.btn_list li i.on{
+    color: rgba(255,255,255,1); 
+    font-size: 12px; 
+    transition: 0.5s;
+}
+
+.s1{
+    background: url(http://yeonzzy.dothome.co.kr/hyundai-elevator/img/01_index/section01/sec01-bg.jpg) no-repeat; 
+    background-attachment: fixed; 
+    background-size: cover; 
+}
+
+.s2{
+    background: url(http://yeonzzy.dothome.co.kr/hyundai-elevator/img/01_index/section02/sec02-bg.jpg) no-repeat; 
+    background-attachment: fixed; 
+    background-size: cover; 
+}
+
+.s3{
+    background: url(http://yeonzzy.dothome.co.kr/hyundai-elevator/img/01_index/section03/sec03-bg.jpg) no-repeat; 
+    background-attachment: fixed; 
+    background-size: cover; 
+}
+.s4{
+    background: url(http://yeonzzy.dothome.co.kr/hyundai-elevator/img/01_index/section04/sec04-bg.jpg) no-repeat; 
+    background-attachment: fixed; 
+    background-size: cover; 
+}
 
 .centerTxt {
     font-size: 27px;
@@ -207,7 +255,7 @@ html,body {
     overflow: hidden;
 }
 .s2 > .business > .elevator > .businessBox > span {
-    background: url(../img/01_index/section02/sec02_elevator_icon.png) no-repeat;
+    background: url(http://yeonzzy.dothome.co.kr/hyundai-elevator/img/01_index/section02/sec02_elevator_icon.png) no-repeat;
     background-size: 40px;
 }
 .s2 > .business > .escalator {
@@ -227,7 +275,7 @@ html,body {
     background: rgba(0,0,0,0.3);
 }
 .businessBox > span {
-    background: url(../img/01_index/section02/sec02_escalator_icon.png) no-repeat;
+    background: url(http://yeonzzy.dothome.co.kr/hyundai-elevator/img/01_index/section02/sec02_escalator_icon.png) no-repeat;
     background-size: 40px;
 }
 .businessBox > p {
@@ -280,7 +328,7 @@ html,body {
     height: 550px;
     overflow: hidden;
     position: relative;
-    background: url(../img/01_index/section03/sec03_thumbnail.jpg) no-repeat;
+    background: url(http://yeonzzy.dothome.co.kr/hyundai-elevator/img/01_index/section03/sec03_thumbnail.jpg) no-repeat;
     background-size: cover;
 }
 
@@ -374,7 +422,7 @@ html,body {
 .s4 > .service > .serviceRight > .about > .aboutBg{
     width: 100%;
     height: 225px;
-    background: url(../img/01_index/section04/sec04_about-bg.jpg) no-repeat;
+    background: url(http://yeonzzy.dothome.co.kr/hyundai-elevator/img/01_index/section04/sec04_about-bg.jpg) no-repeat;
     background-size: cover;
     position: absolute;
 }
@@ -983,7 +1031,4 @@ html,body {
         width: 25px;
         margin: 20px auto 0 auto;
     }
-
-    
-
 }
