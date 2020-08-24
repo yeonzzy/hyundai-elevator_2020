@@ -1,32 +1,34 @@
 @charset "utf-8";
-@import url(commons/reset.css);
-@import url(commons/header.css);
-@import url(commons/footer-sub.css);
+@import url(http://yeonzzy.dothome.co.kr/hyundai-elevator/css/commons/reset.css);
+@import url(http://yeonzzy.dothome.co.kr/hyundai-elevator/css/commons/header.css);
+@import url(http://yeonzzy.dothome.co.kr/hyundai-elevator/css/commons/footer-sub.css);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700;900&display=swap');
 @font-face {
     font-family: 'NanumSquare';
     src: local('font/NanumSquare'),
-        url('../font/NanumSquareR.ttf'),
-        url('../font/NanumSquareR.eot'),
-        url('../font/NanumSquareR.woff');
+        url('http://yeonzzy.dothome.co.kr/hyundai-elevator/font/NanumSquareR.ttf'),
+        url('http://yeonzzy.dothome.co.kr/hyundai-elevator/font/NanumSquareR.eot'),
+        url('http://yeonzzy.dothome.co.kr/hyundai-elevator/font/NanumSquareR.woff');
 }
 @font-face {
     font-family: 'NanumSquareL';
-    src: url('../font/NanumSquareL.ttf'),
-        url('../font/NanumSquareL.eot'),
-        url('../font/NanumSquareL.woff');
+    src: url('http://yeonzzy.dothome.co.kr/hyundai-elevator/font/NanumSquareL.ttf'),
+        url('http://yeonzzy.dothome.co.kr/hyundai-elevator/font/NanumSquareL.eot'),
+        url('http://yeonzzy.dothome.co.kr/hyundai-elevator/font/NanumSquareL.woff');
 }
 @font-face {
     font-family: 'NanumSquareB';
-    src: url('../font/NanumSquareB.ttf'),
-        url('../font/NanumSquareB.eot'),
-        url('../font/NanumSquareB.woff');
+    src: url('http://yeonzzy.dothome.co.kr/hyundai-elevator/font/NanumSquareB.ttf'),
+        url('http://yeonzzy.dothome.co.kr/hyundai-elevator/font/NanumSquareB.eot'),
+        url('http://yeonzzy.dothome.co.kr/hyundai-elevator/font/NanumSquareB.woff');
 }
 @font-face {
     font-family: 'NanumSquareEB';
-    src: url('../font/NanumSquareEB.ttf'),
-        url('../font/NanumSquareEB.eot'),
-        url('../font/NanumSquareEB.woff');
+    src: url('http://yeonzzy.dothome.co.kr/hyundai-elevator/font/NanumSquareEB.ttf'),
+        url('http://yeonzzy.dothome.co.kr/hyundai-elevator/font/NanumSquareEB.eot'),
+        url('http://yeonzzy.dothome.co.kr/hyundai-elevator/font/NanumSquareEB.woff');
 }
+
 
 html,body {
     font-family: 'NanumSquare';
@@ -40,7 +42,7 @@ figure {
     max-width: 100%;
     height: 500px;
     position: relative;
-    background: url(../img/04_news/sub03_figure-bg.jpg) center no-repeat;
+    background: url(http://yeonzzy.dothome.co.kr/hyundai-elevator/img/04_news/sub03_figure-bg.jpg) center no-repeat;
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Noto Sans KR', sans-serif !important;
@@ -74,15 +76,56 @@ figure {
     position: relative;
 }
 
-section {position: relative; max-width: 1024px; margin: 0 auto;}
+section {
+    position: relative; 
+    max-width: 1024px; 
+    margin: 0 auto;
+}
 
-#section_1 {position: relative; margin: 0 auto; max-width: 1024px; margin-top: 50px;}
+#section_1 {
+    position: relative; 
+    margin: 0 auto; 
+    max-width: 1024px; 
+    margin-top: 50px;
+}
 	
-#section_1 .searchbox {width: 100%; margin: 0 auto; text-align: center; margin-bottom: 5%; }
-#section_1 .searchbox .selectbox {border: 1px solid #1c3963; width: 180px; vertical-align: middle; height: 55px; text-indent: 20px; margin-right: 30px; font-size: 15px; font-family: 'NanumSquareB';}
-.text::appearance {padding-right: 50px;}
-#section_1 .searchbox .text {width: 35%;  border: 1px solid #1e3963; font-size: 15px; height: 55px;  text-indent: 1vw; vertical-align: middle; font-family: 'NanumSquareB';}
-#section_1 .searchbox .text::placeholder {color: #424242;  font-family: 'NanumSquareB'; }
+#section_1 .searchbox {
+    width: 100%; 
+    margin: 0 auto; 
+    text-align: center; 
+    margin-bottom: 5%; 
+}
+
+#section_1 .searchbox .selectbox {
+    border: 1px solid #1c3963; 
+    width: 180px; 
+    vertical-align: middle; 
+    height: 55px; 
+    text-indent: 20px; 
+    margin-right: 30px; 
+    font-size: 15px; 
+    font-family: 'NanumSquareB';
+}
+
+.text::appearance {
+    padding-right: 50px;
+}
+
+#section_1 .searchbox .text {
+    width: 35%;  
+    border: 1px solid #1e3963; 
+    font-size: 15px; 
+    height: 55px;  
+    text-indent: 1vw; 
+    vertical-align: middle; 
+    font-family: 'NanumSquareB';
+}
+
+#section_1 .searchbox .text::placeholder {
+    color: #424242;  
+    font-family: 'NanumSquareB'; 
+}
+
 .btn {
     border: 0;
     background: #008837;
@@ -95,31 +138,133 @@ section {position: relative; max-width: 1024px; margin: 0 auto;}
 }
  
     
-#section_1 .news {width: 1024px; margin: 0 auto;}
-#section_1 .news tbody{font-family: 'NanumSquareR';}
-#section_1 .news thead {border-top: 3px solid #008837; border-bottom: 1px solid #e6e6e6;}
-#section_1 .news thead tr td {font-family: 'NanumSquareEB'; font-size: 19px; padding: 15px; text-align: center;}
-#section_1 .news thead tr td.hnumber {width: 15%; }
-#section_1 .news thead tr td.hname {width: 65%;}
-#section_1 .news thead tr td.hdate {width: 20%;}
-#section_1 .news tbody {margin: 0; padding: 0;}
+#section_1 .news {
+    width: 1024px;
+    margin: 0 auto;
+}
 
-#section_1 .news tbody tr td {padding: 20px 0; border-bottom: 1px solid #e6e6e6; font-size: 16px;}
-#section_1 .news tbody tr td.number {width: 15%; text-align: center; }
-#section_1 .news tbody tr td.name {width: 70%; text-align: left; padding-left: 2%;}
+#section_1 .news tbody {
+    font-family: 'NanumSquareR';
+}
+
+#section_1 .news thead {
+    border-top: 3px solid #008837; 
+    border-bottom: 1px solid #e6e6e6;
+}
+
+#section_1 .news thead tr td {
+    font-family: 'NanumSquareEB'; 
+    font-size: 19px; 
+    padding: 15px; 
+    text-align: center;
+}
+
+#section_1 .news thead tr td.hnumber {
+    width: 15%; 
+}
+
+#section_1 .news thead tr td.hname {
+    width: 65%;
+}
+
+#section_1 .news thead tr td.hdate {
+    width: 20%;
+}
+
+#section_1 .news tbody {
+    margin: 0; 
+    padding: 0;
+}
+
+#section_1 .news tbody tr td {
+    padding: 20px 0; 
+    border-bottom: 1px solid #e6e6e6; 
+    font-size: 16px;
+}
+
+#section_1 .news tbody tr td.number {
+    width: 15%; 
+    text-align: center; 
+}
+
+#section_1 .news tbody tr td.name {
+    width: 70%; 
+    text-align: left; 
+    padding-left: 2%;
+}
+
 #section_1 .news tbody tr td.name>a:hover{
     color:#008837;
     font-weight: bold;
 }
-#section_1 .news tbody tr td.date {width: 15%; text-align: center;}
 
-#section_1 .page_num {width: 100%; font-size: 18px; text-align: center; margin: 5% auto; display: inline-block; position: relative;}
-#section_1 .page_num .prev {display: inline-block; width: 36px; height: 35px; background: url(../img/04_news/sub03_page_prevBtn.png); position: relative; top: 10px; margin-right: 1%; background-size: cover;}
-#section_1 .page_num .num_1 {display: inline-block; width: 36px; height: 35px; line-height: 35px; margin-right: 1%;}
-#section_1 .page_num .num_2 {display: inline-block; width: 36px; height: 35px; line-height: 35px; margin-right: 1%;}
-#section_1 .page_num .num_3 {display: inline-block; width: 36px; height: 35px; line-height: 35px; margin-right: 1%;}
-#section_1 .page_num .next {display: inline-block; width: 36px; height: 35px; background: url(../img/04_news/sub03_page_nextBtn.png); margin-right: 1%; position: relative; top: 10px; background-size: cover;}
-.onClick{ border-bottom: 2px solid #008837; font-family: "NanumSquareEB"; font-size: 19px;  font-weight: bold; color: #008837;}
+#section_1 .news tbody tr td.date {
+    width: 15%; 
+    text-align: center;
+}
+
+#section_1 .page_num {
+    width: 100%; 
+    font-size: 18px; 
+    text-align: center; 
+    margin: 5% auto; 
+    display: inline-block; 
+    position: relative;
+}
+
+#section_1 .page_num .prev {
+    display: inline-block; 
+    width: 36px; 
+    height: 35px; 
+    background: url(http://yeonzzy.dothome.co.kr/hyundai-elevator/img/04_news/sub03_page_prevBtn.png); 
+    position: relative; 
+    top: 10px; 
+    margin-right: 1%; 
+    background-size: cover;
+}
+
+#section_1 .page_num .num_1 {
+    display: inline-block; 
+    width: 36px; 
+    height: 35px; 
+    line-height: 35px; 
+    margin-right: 1%;
+}
+
+#section_1 .page_num .num_2 {
+    display: inline-block; 
+    width: 36px; 
+    height: 35px; 
+    line-height: 35px; 
+    margin-right: 1%;
+}
+
+#section_1 .page_num .num_3 {
+    display: inline-block; 
+    width: 36px; 
+    height: 35px; 
+    line-height: 35px; 
+    margin-right: 1%;
+}
+
+#section_1 .page_num .next {
+    display: inline-block; 
+    width: 36px; 
+    height: 35px; 
+    background: url(http://yeonzzy.dothome.co.kr/hyundai-elevator/img/04_news/sub03_page_nextBtn.png); 
+    margin-right: 1%; 
+    position: relative; 
+    top: 10px; 
+    background-size: cover;
+}
+
+.onClick{ 
+    border-bottom: 2px solid #008837; 
+    font-family: "NanumSquareEB"; 
+    font-size: 19px;  
+    font-weight: bold; 
+    color: #008837;
+}
 .page_num > a:hover {
     background: #008837;
     color: #f9f9f9;
@@ -162,18 +307,36 @@ section {position: relative; max-width: 1024px; margin: 0 auto;}
         width: 95%;
     }
     
-    #section_1 .news tbody {margin: 0; padding: 0;}
-    #section_1 .news thead tr td { font-size: 16px; padding: 15px; }
-    #section_1 .news tbody tr td {padding: 15px 0; font-size: 12px;}
+    #section_1 .news tbody {
+        margin: 0; 
+        padding: 0;
+    }
+
+    #section_1 .news thead tr td {
+        font-size: 16px; 
+        padding: 15px;
+    }
+
+    #section_1 .news tbody tr td {
+        padding: 15px 0; 
+        font-size: 12px;
+    }
     
-    #section_1 .searchbox .selectbox { width: 160px; height: 50px; font-size: 14px;}
-    #section_1 .searchbox .text { height: 50px; font-size: 14px;}
+    #section_1 .searchbox .selectbox {
+        width: 160px; 
+        height: 50px; 
+        font-size: 14px;
+    }
+
+    #section_1 .searchbox .text {
+        height: 50px; 
+        font-size: 14px;
+    }
     .btn {
         width: 60px;
         height: 50px;
         line-height: 50px;
     }
-    
 }
 
 @media all and (max-width: 480px) {   
@@ -200,24 +363,73 @@ section {position: relative; max-width: 1024px; margin: 0 auto;}
     }
     
     
-    #section_1 .news tbody {margin: 0; padding: 0;}
-    #section_1 .news thead tr td { font-size: 15px; padding: 10px; }
-    #section_1 .news tbody tr td {padding: 15px 0; font-size: 10px;}
+    #section_1 .news tbody {
+        margin: 0; 
+        padding: 0;
+    }
+
+    #section_1 .news thead tr td {
+        font-size: 15px; 
+        padding: 10px;
+    }
+
+    #section_1 .news tbody tr td {
+        padding: 15px 0; 
+        font-size: 10px;
+    }
     
-    #section_1 .searchbox .selectbox { width: 100px; height: 40px; font-size: 13px; margin-right: 10px;}
-    #section_1 .searchbox .text { height: 40px; width: 45%; font-size: 12px;}
+    #section_1 .searchbox .selectbox {
+        width: 100px; 
+        height: 40px; 
+        font-size: 13px; 
+        margin-right: 10px;
+    }
+
+    #section_1 .searchbox .text {
+        height: 40px; 
+        width: 45%; 
+        font-size: 12px;
+    }
+
     .btn {
         width: 50px;
         height: 40px;
         line-height: 40px;
     }
 
-    #section_1 .page_num { font-size: 16px;}
-    #section_1 .page_num .prev { width: 31px; height: 30px; }
-    #section_1 .page_num .num_1 { width: 31px; height: 31px; line-height: 31px; }
-    #section_1 .page_num .num_2 { width: 31px; height: 31px; line-height: 31px; }
-    #section_1 .page_num .num_3 { width: 31px; height: 31px; line-height: 31px; }
-    #section_1 .page_num .next { width: 32px; height: 31px; }
-    .onClick{ font-size: 17px; }
+    #section_1 .page_num {
+        font-size: 16px;
+    }
+
+    #section_1 .page_num .prev {
+        width: 31px; 
+        height: 30px;
+    }
+
+    #section_1 .page_num .num_1 {
+        width: 31px;
+        height: 31px;
+        line-height: 31px;
+    }
+
+    #section_1 .page_num .num_2 {
+        width: 31px; 
+        height: 31px; 
+        line-height: 31px;
+    }
+
+    #section_1 .page_num .num_3 {
+        width: 31px; 
+        height: 31px; 
+        line-height: 31px;
+    }
+
+    #section_1 .page_num .next {
+        width: 32px; 
+        height: 31px; 
+    }
+    .onClick{ 
+        font-size: 17px;
+    }
 
 }

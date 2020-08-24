@@ -1,31 +1,32 @@
 @charset "utf-8";
-@import url(commons/reset.css);
-@import url(commons/header.css);
-@import url(commons/footer-sub.css);
+@import url(http://yeonzzy.dothome.co.kr/hyundai-elevator/css/commons/reset.css);
+@import url(http://yeonzzy.dothome.co.kr/hyundai-elevator/css/commons/header.css);
+@import url(http://yeonzzy.dothome.co.kr/hyundai-elevator/css/commons/footer-sub.css);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700;900&display=swap');
 @font-face {
     font-family: 'NanumSquare';
     src: local('font/NanumSquare'),
-        url('../font/NanumSquareR.ttf'),
-        url('../font/NanumSquareR.eot'),
-        url('../font/NanumSquareR.woff');
+        url('http://yeonzzy.dothome.co.kr/hyundai-elevator/font/NanumSquareR.ttf'),
+        url('http://yeonzzy.dothome.co.kr/hyundai-elevator/font/NanumSquareR.eot'),
+        url('http://yeonzzy.dothome.co.kr/hyundai-elevator/font/NanumSquareR.woff');
 }
 @font-face {
     font-family: 'NanumSquareL';
-    src: url('../font/NanumSquareL.ttf'),
-        url('../font/NanumSquareL.eot'),
-        url('../font/NanumSquareL.woff');
+    src: url('http://yeonzzy.dothome.co.kr/hyundai-elevator/font/NanumSquareL.ttf'),
+        url('http://yeonzzy.dothome.co.kr/hyundai-elevator/font/NanumSquareL.eot'),
+        url('http://yeonzzy.dothome.co.kr/hyundai-elevator/font/NanumSquareL.woff');
 }
 @font-face {
     font-family: 'NanumSquareB';
-    src: url('../font/NanumSquareB.ttf'),
-        url('../font/NanumSquareB.eot'),
-        url('../font/NanumSquareB.woff');
+    src: url('http://yeonzzy.dothome.co.kr/hyundai-elevator/font/NanumSquareB.ttf'),
+        url('http://yeonzzy.dothome.co.kr/hyundai-elevator/font/NanumSquareB.eot'),
+        url('http://yeonzzy.dothome.co.kr/hyundai-elevator/font/NanumSquareB.woff');
 }
 @font-face {
     font-family: 'NanumSquareEB';
-    src: url('../font/NanumSquareEB.ttf'),
-        url('../font/NanumSquareEB.eot'),
-        url('../font/NanumSquareEB.woff');
+    src: url('http://yeonzzy.dothome.co.kr/hyundai-elevator/font/NanumSquareEB.ttf'),
+        url('http://yeonzzy.dothome.co.kr/hyundai-elevator/font/NanumSquareEB.eot'),
+        url('http://yeonzzy.dothome.co.kr/hyundai-elevator/font/NanumSquareEB.woff');
 }
 
 html,body {
@@ -41,7 +42,7 @@ figure {
     max-width: 100%;
     height: 500px;
     position: relative;
-    background: url(../img/05_career/sub04_figure-bg.jpg) no-repeat;
+    background: url(http://yeonzzy.dothome.co.kr/hyundai-elevator/img/05_career/sub04_figure-bg.jpg) no-repeat;
     background-position: 0 90%;
     background-size: cover;
     background-attachment: fixed;
@@ -118,7 +119,7 @@ figure {
     position: relative;
     width: 100%;
     height: 300px;
-    background: url(../img/05_career/sub04_con_talent-bg.png) bottom no-repeat;
+    background: url(http://yeonzzy.dothome.co.kr/hyundai-elevator/img/05_career/sub04_con_talent-bg.png) bottom no-repeat;
     background-size: cover;
 }
 #talent1 > .talent1Bg > strong {
@@ -173,7 +174,7 @@ figure {
     width: 50%;
     height: 500px;
     float: left;
-    background: url(../img/05_career/sub04_con_talent_work01.jpg) no-repeat;
+    background: url(http://yeonzzy.dothome.co.kr/hyundai-elevator/img/05_career/sub04_con_talent_work01.jpg) no-repeat;
     background-size: cover;
 }
 #talent2 > .talent2Bg:after {
@@ -242,7 +243,7 @@ figure {
     width: 50%;
     height: 500px;
     float: right;
-    background: url(../img/05_career/sub04_con_talent_work02.jpg) no-repeat;
+    background: url(http://yeonzzy.dothome.co.kr/hyundai-elevator/img/05_career/sub04_con_talent_work02.jpg) no-repeat;
     background-size: cover;
 }
 #talent3 > .talent3Txt {
@@ -278,7 +279,7 @@ figure {
     width: 50%;
     height: 500px;
     float: left;
-    background: url(../img/05_career/sub04_con_talent_work03.jpg) no-repeat;
+    background: url(http://yeonzzy.dothome.co.kr/hyundai-elevator/img/05_career/sub04_con_talent_work03.jpg) no-repeat;
     background-size: cover;
 }
 #talent4 > .talent4Bg:after {
@@ -318,7 +319,7 @@ figure {
     position: relative;
     width: 100%;
     height: 300px;
-    background: url(../img/05_career/sub04_con_system-bg.jpg) no-repeat;
+    background: url(http://yeonzzy.dothome.co.kr/hyundai-elevator/img/05_career/sub04_con_system-bg.jpg) no-repeat;
     background-size: cover;
 }
 
@@ -388,7 +389,7 @@ figure {
     left: 195px;
     width: 50px;
     height: 50px;
-    background: url(../img/05_career/sub04_con_system_arrow.png) no-repeat;
+    background: url(http://yeonzzy.dothome.co.kr/hyundai-elevator/img/05_career/sub04_con_system_arrow.png) no-repeat;
     background-size: 20px;
 }
 #system2 > .circle > div:nth-child(5):after {
