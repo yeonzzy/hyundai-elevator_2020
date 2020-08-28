@@ -1,5 +1,5 @@
 ### README
-[hyundai-elevator:-)](yeonzzy.github.io/hyundai-elevator_2020)
+[hyundai-elevator:-)](http://yeonzzy.dothome.co.kr/hyundai-elevator/index.html)
 
 _UI designed & developed by_ **yeonji**
 
